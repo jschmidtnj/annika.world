@@ -7,6 +7,7 @@ const config: GatsbyConfig = {
   },
   graphqlTypegen: true,
   plugins: [
+    'gatsby-plugin-netlify',
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-google-gtag',
     'gatsby-plugin-image',

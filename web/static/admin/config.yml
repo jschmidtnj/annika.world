@@ -1,0 +1,44 @@
+backend:
+  name: github
+  repo: jschmidtnj/annika.world
+  branch: main
+
+site_url: https://annikaworld.netlify.app
+display_url: https://annikaworld.netlify.app
+
+locale: en
+
+media_folder: static/assets
+public_folder: /assets
+
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "static/pages/about.yml"
+        fields:
+          - name: image
+            label: Image
+            widget: image
+          - name: biography
+            label: Biography
+            widget: markdown
+          - name: aboutArt
+            label: 'About Art'
+            widget: markdown
+          - name: education
+            label: Education
+            widget: markdown
+          - name: awards
+            label: Awards
+            widget: markdown
+          - name: bottomImages
+            label: 'Bottom Images'
+            widget: list
+            summary: '{{fields.image}}'
+            field:
+              label: Image
+              name: image
+              widget: image
