@@ -1,4 +1,7 @@
+import { config as dotenv } from 'dotenv'
 import type { GatsbyConfig } from 'gatsby';
+
+dotenv();
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -9,7 +12,14 @@ const config: GatsbyConfig = {
   plugins: [
     'gatsby-plugin-netlify',
     'gatsby-plugin-netlify-cms',
-    'gatsby-plugin-google-gtag',
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          process.env.GOOGLE_ANALYTICS, // Google Analytics / GA
+        ],
+      },
+    },
     'gatsby-plugin-image',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-mui-emotion',
