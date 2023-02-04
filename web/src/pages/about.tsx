@@ -4,10 +4,11 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Link from "../components/Link";
 import Copyright from "../components/Copyright";
-import { graphql, PageProps } from "gatsby";
+import { PageProps } from "gatsby";
+import Layout from "../components/Layout";
 
 const AboutRoute = (_props: PageProps) => (
-  <Container maxWidth="sm">
+  <Layout>
     <Box sx={{ my: 4 }}>
       <Typography variant="h4" component="h1" gutterBottom>
         About
@@ -15,7 +16,7 @@ const AboutRoute = (_props: PageProps) => (
       <Link to="/">Go to the home page</Link>
       <Copyright />
     </Box>
-  </Container>
+  </Layout>
 );
 
 export default AboutRoute;

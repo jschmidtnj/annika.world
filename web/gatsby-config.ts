@@ -5,7 +5,7 @@ dotenv();
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: 'annika.world',
+    title: 'Annika World',
     siteUrl: 'https://annika.world',
   },
   graphqlTypegen: true,
@@ -22,14 +22,16 @@ const config: GatsbyConfig = {
     },
     'gatsby-plugin-image',
     'gatsby-plugin-sitemap',
-    'gatsby-plugin-mui-emotion',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-top-layout',
-    'gatsby-plugin-mui-emotion',
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        pathToEmotionCacheProps: `src/emotion-cache-props`,
+      },
+    },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: 'src/images/icon.png',
+        icon: './content/assets/icon.png',
       },
     },
     'gatsby-plugin-mdx',
@@ -39,16 +41,16 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'images',
-        path: './src/images/',
+        name: 'assets',
+        path: './content/assets/',
       },
-      __key: 'images',
+      __key: 'assets',
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'pages',
-        path: './src/pages/',
+        path: './content/pages/',
       },
       __key: 'pages',
     },
