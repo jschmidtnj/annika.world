@@ -7,6 +7,8 @@ const config: GatsbyConfig = {
   siteMetadata: {
     title: 'Annika World',
     siteUrl: 'https://annika.world',
+    instagram: 'https://instagram.com',
+    soundcloud: 'https://soundcloud.com'
   },
   graphqlTypegen: true,
   plugins: [

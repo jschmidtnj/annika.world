@@ -8,30 +8,75 @@ import {
 } from "@mui/material";
 import HeaderLinks from "./HeaderLinks";
 import { useStaticQuery, graphql } from "gatsby";
+import InstagramIcon from "@mui/icons-material/Instagram";
 import { getFontFamily } from "../utils";
+import Link from "./Link";
+import { LibraryMusic } from "@mui/icons-material";
 
 interface HeaderData {
   site: {
     siteMetadata: {
       title: string;
+      instagram: string;
+      soundcloud: string;
     };
   };
 }
+
+const HeartButton: React.FC<{
+  toggleOpen: () => void;
+  isStar: boolean;
+}> = (props) => (
+  <Button
+    variant="text"
+    onClick={props.toggleOpen}
+    sx={{ minWidth: 0, padding: 0 }}
+  >
+    <Typography
+      color={props.isStar ? "accent.contrastText" : undefined}
+      variant="h5"
+      fontWeight={props.isStar ? "bold" : undefined}
+    >
+      ♡
+    </Typography>
+  </Button>
+);
+
+const Social: React.FC<{
+  siteMetadata: HeaderData["site"]["siteMetadata"];
+  children?: React.ReactNode;
+}> = (props) => (
+  <Stack direction="row" spacing={1} alignItems="center">
+    {props.children}
+    <Link target="_blank" pt={1} to={props.siteMetadata.instagram}>
+      <InstagramIcon />
+    </Link>
+    <Link target="_blank" pt={1} to={props.siteMetadata.soundcloud}>
+      <LibraryMusic />
+    </Link>
+  </Stack>
+);
 
 const Header: React.FC = () => {
   const [isClickedOpen, setIsClickedOpen] = React.useState(false);
   const [isStar, setIsStar] = React.useState(false);
   const theme = useTheme();
-  const isSmall = useMediaQuery(theme.breakpoints.up("sm"));
+  const isNotSmall = useMediaQuery(theme.breakpoints.up("sm"));
   const isOpen = React.useMemo(
-    () => isSmall || isClickedOpen,
-    [isSmall, isClickedOpen]
+    () => !isNotSmall && isClickedOpen,
+    [isNotSmall, isClickedOpen]
+  );
+  const toggleOpen = React.useCallback(
+    () => setIsClickedOpen(!isClickedOpen),
+    [setIsClickedOpen, isClickedOpen]
   );
   const data = useStaticQuery<HeaderData>(graphql`
     query {
       site {
         siteMetadata {
           title
+          instagram
+          soundcloud
         }
       }
     }
@@ -58,19 +103,13 @@ const Header: React.FC = () => {
           md: "flex-start",
         }}
       >
-        <Button
-          variant="text"
-          onClick={() => setIsClickedOpen(!isClickedOpen)}
-          sx={{ minWidth: 0, padding: 0 }}
-        >
-          <Typography
-            color={isStar ? "accent.contrastText" : undefined}
-            variant="h5"
-            fontWeight={isStar ? "bold" : undefined}
-          >
-            ♡
-          </Typography>
-        </Button>
+        {!isNotSmall ? (
+          <HeartButton toggleOpen={toggleOpen} isStar={isStar} />
+        ) : (
+          <Social siteMetadata={data.site.siteMetadata}>
+            <HeartButton toggleOpen={toggleOpen} isStar={isStar} />
+          </Social>
+        )}
         <Typography
           fontWeight="bold"
           textTransform="uppercase"
@@ -81,27 +120,29 @@ const Header: React.FC = () => {
         >
           {data.site.siteMetadata.title}
         </Typography>
-        <Button
-          variant="text"
-          sx={{ minWidth: 0, padding: 0 }}
-          onClick={() => setIsStar(!isStar)}
-        >
-          <Typography
-            color={isStar ? "accent.contrastText" : undefined}
-            fontWeight={isStar ? "bold" : undefined}
-            variant="h5"
+        {isNotSmall ? null : (
+          <Button
+            variant="text"
+            sx={{ minWidth: 0, padding: 0 }}
+            onClick={() => setIsStar(!isStar)}
           >
-            ☆
-          </Typography>
-        </Button>
+            <Typography
+              color={isStar ? "accent.contrastText" : undefined}
+              fontWeight={isStar ? "bold" : undefined}
+              variant="h5"
+            >
+              ☆
+            </Typography>
+          </Button>
+        )}
       </Stack>
-      {!isOpen ? null : (
+      {!isOpen && !isNotSmall ? null : (
         <HeaderLinks
           direction={{ xs: "column", sm: "row" }}
           alignItems={{ xs: "center", sm: "flex-end" }}
           linkProps={{
             textAlign: "center",
-            variant: isSmall ? "h5" : !isStar ? "h4" : "h3",
+            variant: isNotSmall ? "h5" : !isStar ? "h4" : "h3",
             sx: !isStar
               ? undefined
               : {
@@ -110,7 +151,11 @@ const Header: React.FC = () => {
                   "-webkit-text-stroke-color": "white",
                 },
           }}
-        />
+        >
+          {!isOpen ? null : (
+            <Social siteMetadata={data.site.siteMetadata} />
+          )}
+        </HeaderLinks>
       )}
     </Stack>
   );

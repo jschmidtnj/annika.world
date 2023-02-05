@@ -68,6 +68,7 @@ const HeaderLinks: React.FC<
         {page.title}
       </Link>
     ))}
+    {props.children}
   </Stack>
 );
 
