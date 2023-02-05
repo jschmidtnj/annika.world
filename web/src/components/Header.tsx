@@ -110,16 +110,18 @@ const Header: React.FC = () => {
             <HeartButton toggleOpen={toggleOpen} isStar={isStar} />
           </Social>
         )}
-        <Typography
+        <Link
+          to="/"
           fontWeight="bold"
           textTransform="uppercase"
           fontFamily={getFontFamily("Secular One")}
           variant="h4"
+          underline="none"
           whiteSpace="nowrap"
           color={isStar ? "accent.contrastText" : undefined}
         >
           {data.site.siteMetadata.title}
-        </Typography>
+        </Link>
         {isNotSmall ? null : (
           <Button
             variant="text"
