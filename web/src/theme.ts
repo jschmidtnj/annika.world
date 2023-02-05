@@ -19,7 +19,8 @@ const theme = createTheme({
       main: red.A400,
     },
     accent: {
-      main: "#ff0000"
+      main: "#ff0000",
+      contrastText: "#ff005c"
     }
   },
 });

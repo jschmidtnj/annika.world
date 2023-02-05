@@ -60,6 +60,8 @@ const HeaderLinks: React.FC<
         textTransform="uppercase"
         fontFamily={getFontFamily("Bebas Neue")}
         underline="none"
+        variant="h5"
+        whiteSpace="nowrap"
         {...linkProps}
         color={page.secondaryColor ? "accent.main" : undefined}
       >
