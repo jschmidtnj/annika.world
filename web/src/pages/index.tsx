@@ -14,7 +14,7 @@ interface HomeData {
   };
 };
 
-const HomeRoute = (props: PageProps<HomeData>) => (
+const HomePage: React.FC<PageProps<HomeData>> = (props) => (
   <Container maxWidth="lg">
     <Box
       justifyContent="center"
@@ -45,7 +45,7 @@ const HomeRoute = (props: PageProps<HomeData>) => (
   </Container>
 );
 
-export default HomeRoute;
+export default HomePage;
 
 export const pageQuery = graphql`
   query {

@@ -9,6 +9,8 @@ const config: GatsbyConfig = {
     siteUrl: "https://annika.world",
     instagram: "https://instagram.com",
     soundcloud: "https://soundcloud.com",
+    linkedin: "https://linkedin.com",
+    email: "hello@annika.world",
   },
   graphqlTypegen: true,
   plugins: [

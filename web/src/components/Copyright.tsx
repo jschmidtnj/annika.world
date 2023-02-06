@@ -1,5 +1,5 @@
 import * as React from "react";
-import Typography from "@mui/material/Typography";
+import Typography, { TypographyProps } from "@mui/material/Typography";
 import { graphql, useStaticQuery } from "gatsby";
 import Link from "./Link";
 
@@ -11,7 +11,7 @@ interface CopyrightData {
   };
 }
 
-const Copyright: React.FC = () => {
+const Copyright: React.FC<TypographyProps> = (props) => {
   const data = useStaticQuery<CopyrightData>(graphql`
     query {
       site {
@@ -23,7 +23,12 @@ const Copyright: React.FC = () => {
   `);
 
   return (
-    <Typography variant="body2" color="text.secondary" align="center">
+    <Typography
+      variant="body2"
+      color="text.secondary"
+      align="center"
+      {...props}
+    >
       {"Copyright © "}
       <Link color="inherit" to="/">
         {data.site.siteMetadata.title}

@@ -30,7 +30,7 @@ const TextCard: React.FC<{
   </Box>
 );
 
-const AboutRoute = (props: PageProps<AboutData>) => {
+const AboutPage: React.FC<PageProps<AboutData>> = (props) => {
   const heroImage = getImage(props.data.markdownRemark.frontmatter.image);
   return (
     <Layout>
@@ -65,7 +65,7 @@ const AboutRoute = (props: PageProps<AboutData>) => {
   );
 };
 
-export default AboutRoute;
+export default AboutPage;
 
 export const pageQuery = graphql`
   query {
