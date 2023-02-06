@@ -2,6 +2,7 @@ import * as React from "react";
 import {
   Button,
   Stack,
+  StackProps,
   Typography,
   useMediaQuery,
   useTheme,
@@ -57,7 +58,7 @@ const Social: React.FC<{
   </Stack>
 );
 
-const Header: React.FC = () => {
+const Header: React.FC<StackProps> = (props) => {
   const [isClickedOpen, setIsClickedOpen] = React.useState(false);
   const [isStar, setIsStar] = React.useState(false);
   const theme = useTheme();
@@ -84,10 +85,10 @@ const Header: React.FC = () => {
   return (
     <Stack
       mt={4}
-      mb={8}
       direction={{ md: "row" }}
       justifyContent="space-between"
       width="100%"
+      {...props}
     >
       <Stack
         direction="row"

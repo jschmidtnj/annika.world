@@ -9,6 +9,7 @@ display_url: https://annikaworld.netlify.app
 locale: en
 
 media_folder: web/content/assets
+public_folder: ../assets
 
 collections:
   - name: pages

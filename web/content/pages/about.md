@@ -1,5 +1,6 @@
 ---
-image: /web/content/assets/about_hero.jpg
+# image: /web/content/assets/about_hero.jpg
+image: ../assets/about_hero.jpg
 biography: >-
   Annika is a writer-director, musicmaker, and multimedia artist based in New
   York. 

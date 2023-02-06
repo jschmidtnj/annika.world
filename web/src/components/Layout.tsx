@@ -1,15 +1,15 @@
-import { Box, Container } from "@mui/material";
 import * as React from "react";
+import { Container } from "@mui/material";
+import Copyright from "./Copyright";
 import Header from "./Header";
 
 const Layout: React.FC<{
   children: React.ReactNode;
 }> = (props) => (
   <Container maxWidth="lg">
-    <Box mt="8">
-      <Header />
-      {props.children}
-    </Box>
+    <Header mb={3} />
+    {props.children}
+    <Copyright />
   </Container>
 );
 

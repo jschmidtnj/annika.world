@@ -1,60 +1,60 @@
-import { config as dotenv } from 'dotenv'
-import type { GatsbyConfig } from 'gatsby';
+import { config as dotenv } from "dotenv";
+import type { GatsbyConfig } from "gatsby";
 
 dotenv();
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: 'Annika World',
-    siteUrl: 'https://annika.world',
-    instagram: 'https://instagram.com',
-    soundcloud: 'https://soundcloud.com'
+    title: "Annika World",
+    siteUrl: "https://annika.world",
+    instagram: "https://instagram.com",
+    soundcloud: "https://soundcloud.com",
   },
   graphqlTypegen: true,
   plugins: [
-    'gatsby-plugin-netlify',
-    'gatsby-plugin-netlify-cms',
+    "gatsby-plugin-netlify",
+    "gatsby-plugin-netlify-cms",
     {
-      resolve: `gatsby-plugin-google-gtag`,
+      resolve: "gatsby-plugin-google-gtag",
       options: {
         trackingIds: [
           process.env.GOOGLE_ANALYTICS, // Google Analytics / GA
         ],
       },
     },
-    'gatsby-plugin-image',
-    'gatsby-plugin-sitemap',
+    "gatsby-plugin-sitemap",
     {
-      resolve: `gatsby-plugin-material-ui`,
+      resolve: "gatsby-plugin-manifest",
       options: {
-        pathToEmotionCacheProps: `src/emotion-cache-props`,
+        icon: `${__dirname}/content/assets/icon.png`,
       },
     },
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: "gatsby-plugin-material-ui",
       options: {
-        icon: './content/assets/icon.png',
+        pathToEmotionCacheProps: "src/emotion-cache-props",
       },
     },
-    'gatsby-plugin-mdx',
-    'gatsby-transformer-remark',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-transformer-remark",
+    "gatsby-plugin-image",
+    "gatsby-plugin-mdx",
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'assets',
-        path: './content/assets/',
+        name: "assets",
+        path: `${__dirname}/content/assets`,
       },
-      __key: 'assets',
+      __key: "assets",
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'pages',
-        path: './content/pages/',
+        name: "pages",
+        path: `${__dirname}/content/pages/`,
       },
-      __key: 'pages',
+      __key: "pages",
     },
   ],
 };
