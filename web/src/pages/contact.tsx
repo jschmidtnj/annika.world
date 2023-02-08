@@ -1,8 +1,7 @@
 import * as React from "react";
 import { graphql, PageProps } from "gatsby";
 import Layout from "../components/Layout";
-import { Box, Stack, Typography } from "@mui/material";
-import Link from "../components/Link";
+import { Box, Stack, Typography, Link } from "@mui/material";
 import { LibraryMusic } from "@mui/icons-material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -32,7 +31,7 @@ const ContactPage: React.FC<PageProps<ContactData>> = (props) => (
           Studio
         </Typography>
         <Link
-          to={`mailto:${props.data.site.siteMetadata.email}`}
+          href={`mailto:${props.data.site.siteMetadata.email}`}
           underline="none"
         >
           {props.data.site.siteMetadata.email}
@@ -49,13 +48,13 @@ const ContactPage: React.FC<PageProps<ContactData>> = (props) => (
           Social
         </Typography>
         <Stack direction="row" spacing={1} justifyContent="center">
-          <Link target="_blank" to={props.data.site.siteMetadata.instagram}>
+          <Link target="_blank" href={props.data.site.siteMetadata.instagram}>
             <InstagramIcon />
           </Link>
-          <Link target="_blank" to={props.data.site.siteMetadata.soundcloud}>
+          <Link target="_blank" href={props.data.site.siteMetadata.soundcloud}>
             <LibraryMusic />
           </Link>
-          <Link target="_blank" to={props.data.site.siteMetadata.linkedin}>
+          <Link target="_blank" href={props.data.site.siteMetadata.linkedin}>
             <LinkedInIcon />
           </Link>
         </Stack>

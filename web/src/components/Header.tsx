@@ -6,6 +6,7 @@ import {
   Typography,
   useMediaQuery,
   useTheme,
+  Link as ExternalLink,
 } from "@mui/material";
 import HeaderLinks from "./HeaderLinks";
 import { useStaticQuery, graphql } from "gatsby";
@@ -49,12 +50,12 @@ const Social: React.FC<{
 }> = (props) => (
   <Stack direction="row" spacing={1} alignItems="center">
     {props.children}
-    <Link target="_blank" pt={1} to={props.siteMetadata.instagram}>
+    <ExternalLink target="_blank" pt={1} href={props.siteMetadata.instagram}>
       <InstagramIcon />
-    </Link>
-    <Link target="_blank" pt={1} to={props.siteMetadata.soundcloud}>
+    </ExternalLink>
+    <ExternalLink target="_blank" pt={1} href={props.siteMetadata.soundcloud}>
       <LibraryMusic />
-    </Link>
+    </ExternalLink>
   </Stack>
 );
 

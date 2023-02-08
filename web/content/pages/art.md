@@ -1,17 +1,31 @@
 ---
 images:
   - image: ../assets/streakcyber_2022.jpg
-    caption: s﻿treakcyber 2022
+    caption: streakcyber
+    year: 2022
+    width: 2.75
   - image: ../assets/polarwear_2022.jpg
-    caption: p﻿olarwear 2022
+    caption: polarwear
+    year: 2022
+    width: 2.75
   - image: ../assets/mobeyond_2021.jpg
-    caption: m﻿obeyond 2021
+    caption: mobeyond
+    year: 2021
+    width: 1.75
   - image: ../assets/impalate_2022.jpg
-    caption: i﻿mpalate 2022
+    caption: impalate
+    year: 2022
+    width: 2.75
   - image: ../assets/mindgames_2022.jpg
-    caption: m﻿indgames 2022
+    caption: mindgames
+    year: 2022
+    width: 3.3
   - image: ../assets/jaemiplastic_2022.png
-    caption: j﻿aemie plastic 2022
+    caption: jaemie plastic
+    year: 2022
+    width: 3.3
   - image: ../assets/obstruct_2020.jpg
-    caption: o﻿bstruct 2020
+    caption: obstruct
+    year: 2020
+    width: 3.4
 ---

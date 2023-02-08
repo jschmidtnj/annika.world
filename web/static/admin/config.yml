@@ -44,7 +44,19 @@ collections:
             fields:
               - name: caption
                 label: Caption
-                widget: markdown
+                widget: string
               - name: image
                 label: Image
                 widget: image
+              - name: year
+                label: Year
+                widget: number
+                value_type: int
+                default: 2023
+              - name: width
+                label: Width
+                widget: number
+                value_type: float
+                min: 0
+                max: 12
+                default: 3

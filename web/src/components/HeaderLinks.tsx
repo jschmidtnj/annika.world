@@ -23,7 +23,7 @@ const pages: PageData[] = [
   },
   {
     title: "fine art",
-    path: "/fine-art",
+    path: "/art",
   },
   {
     title: "music",
