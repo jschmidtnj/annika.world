@@ -20,7 +20,8 @@ const theme = createTheme({
     },
     accent: {
       main: "#ff0000",
-      contrastText: "#ff005c"
+      contrastText: "#ff005c",
+      light: "#787878"
     }
   },
 });

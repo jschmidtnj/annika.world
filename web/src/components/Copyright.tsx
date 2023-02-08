@@ -34,7 +34,6 @@ const Copyright: React.FC<TypographyProps> = (props) => {
         {data.site.siteMetadata.title}
       </Link>{" "}
       {new Date().getFullYear()}
-      {"."}
     </Typography>
   );
 };

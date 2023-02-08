@@ -34,11 +34,17 @@ collections:
           - name: awards
             label: Awards
             widget: markdown
-          - name: bottomImages
-            label: 'Bottom Images'
+      - label: "Art Page"
+        name: "art"
+        file: "web/content/pages/art.md"
+        fields:
+          - name: images
+            label: Images
             widget: list
-            summary: '{{fields.image}}'
-            field:
-              label: Image
-              name: image
-              widget: image
+            fields:
+              - name: caption
+                label: Caption
+                widget: markdown
+              - name: image
+                label: Image
+                widget: image

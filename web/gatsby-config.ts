@@ -12,6 +12,7 @@ const config: GatsbyConfig = {
     linkedin: "https://linkedin.com",
     email: "hello@annika.world",
   },
+  trailingSlash: 'never',
   graphqlTypegen: true,
   plugins: [
     "gatsby-plugin-netlify",
