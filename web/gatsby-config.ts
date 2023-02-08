@@ -7,9 +7,9 @@ const config: GatsbyConfig = {
   siteMetadata: {
     title: "Annika World",
     siteUrl: "https://annika.world",
-    instagram: "https://instagram.com",
-    soundcloud: "https://soundcloud.com",
-    linkedin: "https://linkedin.com",
+    instagram: "https://www.instagram.com/5icklove",
+    soundcloud: "https://soundcloud.com/5icklove",
+    linkedin: "https://www.linkedin.com/in/nyc-annika",
     email: "hello@annika.world",
   },
   trailingSlash: 'never',
