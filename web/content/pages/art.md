@@ -9,7 +9,7 @@ images:
     year: 2022
     width: 2.75
   - image: ../assets/mobeyond_2021.jpg
-    caption: mobeyond
+    caption: mo
     year: 2021
     width: 1.75
   - image: ../assets/impalate_2022.jpg
@@ -17,11 +17,11 @@ images:
     year: 2022
     width: 2.75
   - image: ../assets/mindgames_2022.jpg
-    caption: mindgames
+    caption: mindgame
     year: 2022
     width: 3.3
   - image: ../assets/jaemiplastic_2022.png
-    caption: jaemie plastic
+    caption: jaemi
     year: 2022
     width: 3.3
   - image: ../assets/obstruct_2020.jpg
