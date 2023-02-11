@@ -28,4 +28,28 @@ images:
     caption: obstruct
     year: 2020
     width: 3.4
+  - year: 2020
+    width: 3.2
+    caption: burnt brick
+    image: ../assets/burntbrick_2020.jpg
+  - year: 2021
+    width: 3.5
+    caption: chunky sunset
+    image: ../assets/chunkysunset_2021.jpg
+  - year: 2021
+    width: 3.6
+    caption: guttural
+    image: ../assets/guttural_2021.jpg
+  - year: 2020
+    width: 3
+    caption: huddle fry
+    image: ../assets/huddlefry_2020.jpg
+  - year: 2023
+    width: 3
+    caption: self portrait smiling
+    image: ../assets/selfportraitsmiling_2023.jpg
+  - year: 1997
+    width: 4
+    caption: wrinkle tender
+    image: ../assets/wrinkletender_2020.jpg
 ---
