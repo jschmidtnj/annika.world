@@ -48,7 +48,7 @@ images:
     width: 3.2
     caption: self portrait smiling
     image: ../assets/selfportraitsmiling_2023.jpg
-  - year: 1997
+  - year: 2020
     width: 3.6
     caption: wrinkle tender
     image: ../assets/wrinkletender_2020.jpg
