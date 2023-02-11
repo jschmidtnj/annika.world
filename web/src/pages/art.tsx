@@ -9,6 +9,7 @@ import {
 import Grid from "@mui/material/Unstable_Grid2";
 import Layout from "../components/Layout";
 import { Box, Typography } from "@mui/material";
+import { getFontFamily } from "../utils";
 
 interface metadata {
   caption: string;
@@ -40,12 +41,14 @@ const Image: React.FC<{
       onMouseLeave={() => setActive(false)}
     >
       {!active ? null : (
-        <Box position="relative" top="45%" zIndex={1} height={0}>
+        <Box position="relative" top="40%" zIndex={1} height={0}>
           <Typography
             textTransform="uppercase"
             color="white"
             fontWeight="bold"
             textAlign="center"
+            variant="h5"
+            fontFamily={getFontFamily("Bebas Neue")}
           >
             {props.metadata.caption}
           </Typography>
@@ -53,6 +56,8 @@ const Image: React.FC<{
             color="white"
             fontWeight="bold"
             textAlign="center"
+            variant="h5"
+            fontFamily={getFontFamily("Bebas Neue")}
           >
             {props.metadata.year}
           </Typography>
@@ -84,7 +89,7 @@ const ArtPage: React.FC<PageProps<ArtData>> = (props) => {
       props.data.markdownRemark.frontmatter.images.map((img) => ({
         caption: img.caption,
         width: img.width,
-        year: img.year
+        year: img.year,
       })),
     [props.data.markdownRemark.frontmatter.images]
   );

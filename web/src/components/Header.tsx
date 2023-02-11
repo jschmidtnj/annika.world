@@ -11,9 +11,10 @@ import {
 import HeaderLinks from "./HeaderLinks";
 import { useStaticQuery, graphql } from "gatsby";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import { navigate } from "gatsby";
 import { getFontFamily } from "../utils";
 import Link from "./Link";
-import { LibraryMusic } from "@mui/icons-material";
+import { CloudQueue } from "@mui/icons-material";
 
 interface HeaderData {
   site: {
@@ -26,12 +27,12 @@ interface HeaderData {
 }
 
 const HeartButton: React.FC<{
-  toggleOpen: () => void;
+  handleClick: () => void;
   isStar: boolean;
 }> = (props) => (
   <Button
     variant="text"
-    onClick={props.toggleOpen}
+    onClick={props.handleClick}
     sx={{ minWidth: 0, padding: 0 }}
   >
     <Typography
@@ -54,7 +55,7 @@ const Social: React.FC<{
       <InstagramIcon />
     </ExternalLink>
     <ExternalLink target="_blank" pt={1} href={props.siteMetadata.soundcloud}>
-      <LibraryMusic />
+      <CloudQueue />
     </ExternalLink>
   </Stack>
 );
@@ -106,10 +107,10 @@ const Header: React.FC<StackProps> = (props) => {
         }}
       >
         {!isNotSmall ? (
-          <HeartButton toggleOpen={toggleOpen} isStar={isStar} />
+          <HeartButton handleClick={toggleOpen} isStar={isStar} />
         ) : (
           <Social siteMetadata={data.site.siteMetadata}>
-            <HeartButton toggleOpen={toggleOpen} isStar={isStar} />
+            <HeartButton handleClick={() => navigate("/")} isStar={isStar} />
           </Social>
         )}
         <Link
@@ -156,9 +157,7 @@ const Header: React.FC<StackProps> = (props) => {
                 },
           }}
         >
-          {!isOpen ? null : (
-            <Social siteMetadata={data.site.siteMetadata} />
-          )}
+          {!isOpen ? null : <Social siteMetadata={data.site.siteMetadata} />}
         </HeaderLinks>
       )}
     </Stack>

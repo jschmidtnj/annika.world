@@ -19,7 +19,7 @@ interface ContactData {
 
 const ContactPage: React.FC<PageProps<ContactData>> = (props) => (
   <Layout>
-    <Stack textAlign="center" mt={20} spacing={8} justifyContent="center">
+    <Stack textAlign="center" mt={20} spacing={20} justifyContent="center">
       <Box>
         <Typography
           variant="h5"

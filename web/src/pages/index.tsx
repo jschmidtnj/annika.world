@@ -8,6 +8,8 @@ import { getFontFamily } from "../utils";
 import HeaderLinks from "../components/HeaderLinks";
 import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image";
 
+const slideshowInterval: number = 1375; // ms
+
 interface HomeData {
   site: {
     siteMetadata: {
@@ -41,9 +43,9 @@ const HomePage: React.FC<PageProps<HomeData>> = (props) => {
           top="50%"
           left="50%"
           width={{
-            xs: '100%',
+            xs: "100%",
             sm: 500,
-            md: 650
+            md: 650,
           }}
           sx={{
             transform: "translate(-50%, -50%)",
@@ -53,14 +55,14 @@ const HomePage: React.FC<PageProps<HomeData>> = (props) => {
             indicators={false}
             navButtonsAlwaysInvisible
             stopAutoPlayOnHover={false}
-            interval={2000}
+            interval={slideshowInterval}
           >
             {images.map((img) => (
               <Box height={500} key={`image-${img.caption}`}>
                 <GatsbyImage
                   style={{
                     height: "100%",
-                    opacity: 0.8
+                    opacity: 0.8,
                   }}
                   alt={img.caption}
                   image={img.image!}
@@ -80,7 +82,7 @@ const HomePage: React.FC<PageProps<HomeData>> = (props) => {
           width={{
             xs: undefined,
             sm: 600,
-            md: 800
+            md: 800,
           }}
           textAlign="center"
         >
