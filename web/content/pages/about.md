@@ -1,5 +1,4 @@
 ---
-# image: /web/content/assets/about_hero.jpg
 image: ../assets/about_hero.jpg
 biography: >-
   Annika is a writer-director, musicmaker, and multimedia artist based in New
@@ -23,12 +22,21 @@ aboutArt: >-
 
   Annika utilizes a deeply layered approach to storytelling, intensifying visual and musical narratives through a process of fragmentation and collage, in order to evoke variable states of consciousness and subjectivities in perception. The result is a bold and energized body of work inviting dissection.
 education: >-
-  2024 New York University
+  New York University Class of 2024
 
 
   Gallatin School of Individualized Study — B.A. in Multimedia Storytelling and States of Consciousness
 
 
   Tisch School of the Arts — Minor in Film
-awards: this is where i list my awards
+awards: |-
+  Writer, Director, “Fire Exit” Short Film, 2023
+
+  * Winner of the Gallatin Film Alliance Pitch Award
+
+  First Assistant Director, Editor “I Do Not Have A Problem Like At All”, 2021
+
+  * Semifinalist at the Flickers Rhode Island International Film Festival
+
+  Silver Recognitions for Photographic Excellence, 2019
 ---
