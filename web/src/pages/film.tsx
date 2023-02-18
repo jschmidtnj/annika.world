@@ -31,10 +31,10 @@ export default FilmPage;
 
 export const pageQuery = graphql`
   query {
-    markdownRemark(fileAbsolutePath: { regex: "/.*/content/uploads/reel.md$/" }) {
-      frontmatter {
-        reel
-      }
-    }
+    # markdownRemark(fileAbsolutePath: { regex: "/.*/content/uploads/reel.md$/" }) {
+    #   frontmatter {
+    #     reel
+    #   }
+    # }
   }
 `;
