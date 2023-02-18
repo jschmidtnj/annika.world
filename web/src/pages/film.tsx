@@ -30,11 +30,11 @@ const FilmPage: React.FC<PageProps<FilmData>> = () => (
 export default FilmPage;
 
 export const pageQuery = graphql`
-  query {
-    # markdownRemark(fileAbsolutePath: { regex: "/.*/content/uploads/reel.md$/" }) {
-    #   frontmatter {
-    #     reel
-    #   }
-    # }
-  }
+  # query {
+  #   markdownRemark(fileAbsolutePath: { regex: "/.*/content/uploads/reel.md$/" }) {
+  #     frontmatter {
+  #       reel
+  #     }
+  #   }
+  # }
 `;
