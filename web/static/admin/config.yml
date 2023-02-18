@@ -11,6 +11,7 @@ locale: en
 media_folder: web/content/assets
 public_folder: ../assets
 
+
 collections:
   - name: pages
     label: Pages
