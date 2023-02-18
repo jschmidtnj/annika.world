@@ -7,6 +7,7 @@ site_url: https://annikaworld.netlify.app
 display_url: https://annikaworld.netlify.app
 
 locale: en
+media_folder: ''
 
 collections:
   - name: pages
