@@ -7,17 +7,18 @@ import ReactPlayer from "react-player/lazy";
 interface FilmData {
   markdownRemark: {
     frontmatter: {
-      reel: string;
+      video: string;
     };
   };
 }
 
-const FilmPage: React.FC<PageProps<FilmData>> = () => (
+const FilmPage: React.FC<PageProps<FilmData>> = (props) => (
   <Layout>
     <Box mt={4}>
       <ReactPlayer
         width="100%"
         height="500px"
+        // url={props.data.markdownRemark.frontmatter.video}
         url="/reel.mp4"
         controls
         muted
@@ -29,12 +30,12 @@ const FilmPage: React.FC<PageProps<FilmData>> = () => (
 
 export default FilmPage;
 
-export const pageQuery = graphql`
-  # query {
-  #   markdownRemark(fileAbsolutePath: { regex: "/.*/content/uploads/reel.md$/" }) {
-  #     frontmatter {
-  #       reel
-  #     }
-  #   }
-  # }
-`;
+// export const pageQuery = graphql`
+//   query {
+//     markdownRemark(fileAbsolutePath: { regex: "/.*/content/uploads/reel.md$/" }) {
+//       frontmatter {
+//         video
+//       }
+//     }
+//   }
+// `;
