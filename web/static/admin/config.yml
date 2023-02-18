@@ -60,3 +60,20 @@ collections:
                 min: 0
                 max: 12
                 default: 3
+  - name: uploads
+    label: Uploads
+    label_singular: Upload
+    media_folder: web/static
+    public_folder: ''
+    files:
+      - label: "Reel"
+        name: "reel"
+        file: "web/content/uploads/reel.md"
+        fields:
+          - label: "Video"
+            name: "video"
+            widget: "file"
+            default: "/static/reel.mp4"
+            media_library:
+              allow_multiple: false
+              choose_url: false

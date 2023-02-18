@@ -1,10 +1,18 @@
 import * as React from "react";
-import { PageProps } from "gatsby";
+import { graphql, PageProps } from "gatsby";
 import Layout from "../components/Layout";
 import { Box } from "@mui/material";
 import ReactPlayer from "react-player/lazy";
 
-const FilmPage: React.FC<PageProps> = () => (
+interface FilmData {
+  markdownRemark: {
+    frontmatter: {
+      reel: string;
+    };
+  };
+}
+
+const FilmPage: React.FC<PageProps<FilmData>> = () => (
   <Layout>
     <Box mt={4}>
       <ReactPlayer
@@ -20,3 +28,13 @@ const FilmPage: React.FC<PageProps> = () => (
 );
 
 export default FilmPage;
+
+export const pageQuery = graphql`
+  query {
+    markdownRemark(fileAbsolutePath: { regex: "/.*/content/uploads/reel.md$/" }) {
+      frontmatter {
+        reel
+      }
+    }
+  }
+`;
