@@ -75,4 +75,9 @@ images:
     caption: burnt brick
     showCaption: true
     image: ../assets/burntbrick_2020.jpg
+  - showCaption: true
+    year: 2023
+    width: 3
+    image: ../assets/20230217_110533.jpg
+    caption: test img
 ---
