@@ -5,7 +5,7 @@ biography: >-
   York. 
 
 
-  Annika’s filmmaking practice seeks to tell bold and subversive stories which propagate multidimensional representations—transforming minds and shifting cultural paradigms through film and television. 
+  Annika’s filmmaking practice tells bold and subversive stories which propagate multidimensional representations—transforming minds and shifting cultural paradigms through film and television. 
 
 
   Annika’s academic concentration specializes in the intersection of filmmaking, psychology, philosophy, multimedia art, and writing, which ultimately guides them to produce artworks which probe the mind.
