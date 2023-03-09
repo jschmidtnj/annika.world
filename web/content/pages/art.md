@@ -1,14 +1,6 @@
 ---
 images:
   - year: 2023
-    width: 0
-    image: ../assets/gummybear.jpeg
-    caption: Gummy bear
-  - year: 2023
-    width: 3
-    image: ../assets/selfportrait.jpeg
-    caption: pink ice
-  - year: 2023
     width: 3.2
     caption: self portrait smiling
     showCaption: true
@@ -73,4 +65,14 @@ images:
     caption: burnt brick
     showCaption: true
     image: ../assets/burntbrick_2020.jpg
+  - year: 2023
+    width: 3
+    image: ../assets/gummybear.jpg
+    caption: Gummy bear
+    showCaption: true
+  - year: 2023
+    width: 3
+    image: ../assets/selfportrait.jpg
+    caption: pink ice
+    showCaption: true
 ---
