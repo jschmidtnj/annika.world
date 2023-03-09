@@ -1,6 +1,14 @@
 ---
 images:
   - year: 2023
+    width: 0
+    image: ../assets/gummybear.jpeg
+    caption: Gummy bear
+  - year: 2023
+    width: 3
+    image: ../assets/selfportrait.jpeg
+    caption: pink ice
+  - year: 2023
     width: 3.2
     caption: self portrait smiling
     showCaption: true
