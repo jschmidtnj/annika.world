@@ -17,7 +17,7 @@ images:
     image: ../assets/selfportraitsmiling_2023.jpg
   - image: ../assets/streakcyber_2022.jpg
     caption: streakcyber
-    showCaption: true
+    showCaption: false
     year: 2022
     width: 3.2
   - image: ../assets/polarwear_2022.jpg
@@ -53,16 +53,16 @@ images:
   - year: 2021
     width: 4
     caption: guttural
-    showCaption: true
+    showCaption: false
     image: ../assets/guttural_2021.jpg
   - year: 2020
     width: 3
     caption: huddle fry
-    showCaption: true
+    showCaption: false
     image: ../assets/huddlefry_2020.jpg
   - image: ../assets/obstruct_2020.jpg
     caption: obstruct
-    showCaption: true
+    showCaption: false
     year: 2020
     width: 3.2
   - year: 2020
