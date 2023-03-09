@@ -13,6 +13,7 @@ import { getFontFamily } from "../utils";
 
 interface metadata {
   caption: string;
+  showCaption: boolean;
   width: number;
   year: number;
 }
@@ -42,16 +43,18 @@ const Image: React.FC<{
     >
       {!active ? null : (
         <Box position="relative" top="40%" zIndex={1} height={0}>
-          <Typography
-            textTransform="uppercase"
-            color="white"
-            fontWeight="bold"
-            textAlign="center"
-            variant="h5"
-            fontFamily={getFontFamily("Bebas Neue")}
-          >
-            {props.metadata.caption}
-          </Typography>
+          {!props.metadata.showCaption ? null : (
+            <Typography
+              textTransform="uppercase"
+              color="white"
+              fontWeight="bold"
+              textAlign="center"
+              variant="h5"
+              fontFamily={getFontFamily("Bebas Neue")}
+            >
+              {props.metadata.caption}
+            </Typography>
+          )}
           <Typography
             color="white"
             fontWeight="bold"
@@ -88,6 +91,7 @@ const ArtPage: React.FC<PageProps<ArtData>> = (props) => {
     () =>
       props.data.markdownRemark.frontmatter.images.map((img) => ({
         caption: img.caption,
+        showCaption: img.showCaption,
         width: img.width,
         year: img.year,
       })),
@@ -125,6 +129,7 @@ export const pageQuery = graphql`
             }
           }
           caption
+          showCaption
           width
           year
         }

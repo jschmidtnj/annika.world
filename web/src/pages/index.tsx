@@ -8,7 +8,7 @@ import { getFontFamily } from "../utils";
 import HeaderLinks from "../components/HeaderLinks";
 import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image";
 
-const slideshowInterval: number = 1375; // ms
+const slideshowInterval: number = 1000; // ms
 
 interface HomeData {
   site: {
