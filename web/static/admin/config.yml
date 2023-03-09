@@ -12,7 +12,7 @@ media_folder: ''
 collections:
   - name: pages
     label: Pages
-    media_folder: web/content/assets
+    media_folder: ../assets
     public_folder: ../assets
     files:
       - label: "About Page"
