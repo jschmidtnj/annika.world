@@ -55,8 +55,9 @@ const HomePage: React.FC<PageProps<HomeData>> = (props) => {
           }}
         >
           <Carousel
+            // TODO(joshua) - fix the animation to be jump-cut
             // @ts-ignore
-            animation=""
+            // animation=""
             swipe={false}
             indicators={false}
             navButtonsAlwaysInvisible
