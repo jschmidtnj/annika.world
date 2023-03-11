@@ -1,10 +1,8 @@
 import * as React from "react";
 import Carousel from "react-material-ui-carousel";
 import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { graphql, PageProps } from "gatsby";
-import { getFontFamily } from "../utils";
 import HeaderLinks from "../components/HeaderLinks";
 import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image";
 
@@ -57,13 +55,19 @@ const HomePage: React.FC<PageProps<HomeData>> = (props) => {
           }}
         >
           <Carousel
+            // @ts-ignore
+            animation=""
+            swipe={false}
             indicators={false}
             navButtonsAlwaysInvisible
             stopAutoPlayOnHover={false}
             interval={slideshowInterval}
           >
             {images.map((img) => (
-              <Box height={500} key={`image-${img.caption}`}>
+              <Box height={{
+                xs: 300,
+                sm: 500
+              }} key={`image-${img.caption}`}>
                 <GatsbyImage
                   style={{
                     height: "100%",
