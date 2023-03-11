@@ -16,6 +16,7 @@ interface HomeData {
       title: string;
     };
   };
+  homeLogo: ImageDataLike;
   markdownRemark: {
     frontmatter: {
       images: {
@@ -34,6 +35,10 @@ const HomePage: React.FC<PageProps<HomeData>> = (props) => {
         caption: img.caption,
       })),
     [props.data.markdownRemark.frontmatter.images]
+  );
+  const homeLogo = React.useMemo(
+    () => getImage(props.data.homeLogo),
+    [props.data.homeLogo]
   );
   return (
     <Container maxWidth="lg">
@@ -93,15 +98,20 @@ const HomePage: React.FC<PageProps<HomeData>> = (props) => {
               variant: "h4",
             }}
           />
-          <Typography
-            fontFamily={getFontFamily("Secular One")}
-            fontWeight="bold"
-            variant="h1"
-            textTransform="uppercase"
-            component="h1"
+          <Box
+            height={{
+              xs: 40,
+              sm: 80,
+            }}
           >
-            {props.data.site.siteMetadata.title}
-          </Typography>
+            <GatsbyImage
+              style={{
+                height: "100%",
+              }}
+              alt={props.data.site.siteMetadata.title}
+              image={homeLogo!}
+            />
+          </Box>
         </Box>
       </Box>
     </Container>
@@ -115,6 +125,17 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+    homeLogo: file(
+      absolutePath: { regex: "/.*/content/assets/home_logo.png$/" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+          layout: FULL_WIDTH
+        )
       }
     }
     markdownRemark(fileAbsolutePath: { regex: "/.*/content/pages/art.md$/" }) {
