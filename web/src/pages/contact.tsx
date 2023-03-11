@@ -2,7 +2,7 @@ import * as React from "react";
 import { graphql, PageProps } from "gatsby";
 import Layout from "../components/Layout";
 import { Box, Stack, Typography, Link } from "@mui/material";
-import { LibraryMusic } from "@mui/icons-material";
+import { CloudQueue } from "@mui/icons-material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
@@ -52,7 +52,7 @@ const ContactPage: React.FC<PageProps<ContactData>> = (props) => (
             <InstagramIcon />
           </Link>
           <Link target="_blank" href={props.data.site.siteMetadata.soundcloud}>
-            <LibraryMusic />
+            <CloudQueue />
           </Link>
           <Link target="_blank" href={props.data.site.siteMetadata.linkedin}>
             <LinkedInIcon />
