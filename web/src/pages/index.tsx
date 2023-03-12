@@ -107,6 +107,7 @@ const HomePage: React.FC<PageProps<HomeData>> = (props) => {
             height={{
               xs: 40,
               sm: 80,
+              md: 110
             }}
           >
             <GatsbyImage
