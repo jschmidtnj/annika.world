@@ -2,7 +2,7 @@ import * as React from "react";
 import Grid from "@mui/material/Unstable_Grid2";
 import { graphql, PageProps } from "gatsby";
 import Layout from "../components/Layout";
-import { Box, Stack, Typography, Link } from "@mui/material";
+import { Box, Stack, Typography, Link, useMediaQuery, useTheme } from "@mui/material";
 import { CloudQueue } from "@mui/icons-material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -30,75 +30,77 @@ const ContactPage: React.FC<PageProps<ContactData>> = (props) => {
     () => getImage(props.data.backgroundRight),
     [props.data.backgroundRight]
   );
+  const theme = useTheme();
+  const isNotSmall = useMediaQuery(theme.breakpoints.up("sm"));
   return (
     <Layout>
-      <Grid container spacing={2}>
-        <Grid xs={3}>
+      <Stack direction="row" justifyContent={{ xs: "center", sm: "space-between" }} spacing={2}>
+        {!isNotSmall ? null : (
           <GatsbyImage
             style={{
               height: "100%",
+              width: "250px"
             }}
             alt="tattoo"
             image={backgroundLeft!}
             imgStyle={{ transition: 'none' }}
             loading="eager"
           />
-        </Grid>
-        <Grid xs={6}>
-          <Stack textAlign="center" mt={20} spacing={20} justifyContent="center">
-            <Box>
-              <Typography
-                variant="h5"
-                component="h2"
-                textTransform="capitalize"
-                fontWeight="bold"
-                mb={3}
-              >
-                Studio
-              </Typography>
-              <Link
-                href={`mailto:${props.data.site.siteMetadata.contactEmail}`}
-                underline="none"
-              >
-                {props.data.site.siteMetadata.contactEmail}
+        )}
+        <Stack textAlign="center" mt={20} spacing={20} justifyContent="center">
+          <Box>
+            <Typography
+              variant="h5"
+              component="h2"
+              textTransform="capitalize"
+              fontWeight="bold"
+              mb={3}
+            >
+              Studio
+            </Typography>
+            <Link
+              href={`mailto:${props.data.site.siteMetadata.contactEmail}`}
+              underline="none"
+            >
+              {props.data.site.siteMetadata.contactEmail}
+            </Link>
+          </Box>
+          <Box>
+            <Typography
+              variant="h5"
+              component="h2"
+              textTransform="capitalize"
+              fontWeight="bold"
+              mb={2}
+            >
+              Social
+            </Typography>
+            <Stack direction="row" spacing={1} justifyContent="center">
+              <Link target="_blank" href={props.data.site.siteMetadata.instagram}>
+                <InstagramIcon />
               </Link>
-            </Box>
-            <Box>
-              <Typography
-                variant="h5"
-                component="h2"
-                textTransform="capitalize"
-                fontWeight="bold"
-                mb={2}
-              >
-                Social
-              </Typography>
-              <Stack direction="row" spacing={1} justifyContent="center">
-                <Link target="_blank" href={props.data.site.siteMetadata.instagram}>
-                  <InstagramIcon />
-                </Link>
-                <Link target="_blank" href={props.data.site.siteMetadata.soundcloud}>
-                  <CloudQueue />
-                </Link>
-                <Link target="_blank" href={props.data.site.siteMetadata.linkedin}>
-                  <LinkedInIcon />
-                </Link>
-              </Stack>
-            </Box>
-          </Stack>
-        </Grid>
-        <Grid xs={3}>
+              <Link target="_blank" href={props.data.site.siteMetadata.soundcloud}>
+                <CloudQueue />
+              </Link>
+              <Link target="_blank" href={props.data.site.siteMetadata.linkedin}>
+                <LinkedInIcon />
+              </Link>
+            </Stack>
+          </Box>
+        </Stack>
+        {!isNotSmall ? null : (
           <GatsbyImage
             style={{
               height: "100%",
+              width: "250px"
             }}
             alt="tattoo"
             image={backgroundRight!}
             imgStyle={{ transition: 'none' }}
             loading="eager"
           />
-        </Grid>
-      </Grid>
+        )}
+      </Stack>
     </Layout>
   );
 };
