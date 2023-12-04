@@ -2,21 +2,41 @@
 images:
   - showCaption: true
     year: 2023
-    width: 3.2
+    width: 3
+    caption: shock
+    image: ../assets/nate3.2.png
+  - showCaption: true
+    year: 2023
+    width: 4
+    caption: barendorfer
+    image: ../assets/barendorferstill.png
+  - showCaption: true
+    year: 2023
+    width: 3
+    image: ../assets/theordinaryinstant.png
+    caption: the ordinary instant
+  - showCaption: true
+    year: 2021
+    width: 2
+    image: ../assets/1nate.png
+    caption: grief red
+  - showCaption: true
+    year: 2023
+    width: 2
     caption: side sleep tutorial
     image: ../assets/actualangeloatmeals_drained.jpg
   - year: 2023
-    width: 3.2
+    width: 2
     image: ../assets/selfportrait.jpg
     caption: pink ice
     showCaption: true
   - year: 2023
-    width: 3.6
+    width: 4
     image: ../assets/gummybear.jpg
     caption: Gummy bear
     showCaption: true
   - year: 2023
-    width: 3.0
+    width: 4
     caption: self portrait smiling
     showCaption: true
     image: ../assets/selfportraitsmiling_2023.jpg
@@ -24,22 +44,22 @@ images:
     caption: streakcyber
     showCaption: false
     year: 2022
-    width: 3.0
+    width: 2
   - image: ../assets/polarwear_2022.jpg
     caption: polarwear
     showCaption: true
     year: 2022
-    width: 2.0
+    width: 4
   - image: ../assets/impalate_2022.jpg
     caption: impalate
     showCaption: false
     year: 2022
-    width: 2.0
+    width: 2
   - image: ../assets/mindgames_2022.jpg
     caption: mindgame
     showCaption: true
     year: 2022
-    width: 2.6
+    width: 2
   - image: ../assets/jaemiplastic_2022.png
     caption: jaemi
     showCaption: true
