@@ -41,21 +41,23 @@ const Image: React.FC<{
               {props.metadata.caption}
             </Typography>
           )}
-          <Typography
-            color="white"
-            fontWeight="bold"
-            textAlign="center"
-            variant="h5"
-            fontFamily={getFontFamily("Bebas Neue")}
-          >
-            {props.metadata.year}
-          </Typography>
+          {!props.metadata.year ? null : (
+            <Typography
+              color="white"
+              fontWeight="bold"
+              textAlign="center"
+              variant="h5"
+              fontFamily={getFontFamily("Bebas Neue")}
+            >
+              {props.metadata.year}
+            </Typography>
+          )}
         </Box>
       )}
       <GatsbyImage
         style={{
           height: "100%",
-          opacity: !active ? undefined : 0.3,
+          opacity: !active ? undefined : (!props.metadata.year && !props.metadata.showCaption) ? 0.9 : 0.3,
           transition: "0.25s ease",
         }}
         alt={props.metadata.caption}

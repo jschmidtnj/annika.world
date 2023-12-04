@@ -4,7 +4,7 @@ images:
     year: 2023
     width: 3.2
     caption: side sleep tutorial
-    image: ../assets/actualangeloatmeals-drained.jpg
+    image: ../assets/actualangeloatmeals_drained.jpg
   - year: 2023
     width: 3.2
     image: ../assets/selfportrait.jpg

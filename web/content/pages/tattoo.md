@@ -2,84 +2,154 @@
 description: >-
   to book, DM @5icklove on instagram or email studio@annika.world <3
 images:
-  - showCaption: true
-    year: 2023
-    width: 3.2
-    caption: side sleep tutorial
-    image: ../assets/actualangeloatmeals-drained.jpg
-  - year: 2023
-    width: 3.2
-    image: ../assets/selfportrait.jpg
-    caption: pink ice
-    showCaption: true
-  - year: 2023
-    width: 3.6
-    image: ../assets/gummybear.jpg
-    caption: Gummy bear
-    showCaption: true
-  - year: 2023
-    width: 3.0
-    caption: self portrait smiling
-    showCaption: true
-    image: ../assets/selfportraitsmiling_2023.jpg
-  - image: ../assets/streakcyber_2022.jpg
-    caption: streakcyber
-    showCaption: false
-    year: 2022
-    width: 3.0
-  - image: ../assets/polarwear_2022.jpg
-    caption: polarwear
-    showCaption: true
-    year: 2022
+  - year: 0
     width: 2.0
-  - image: ../assets/impalate_2022.jpg
-    caption: impalate
+    image: ../assets/tattoo_bug1.jpg
+    caption: bug 1
     showCaption: false
-    year: 2022
+  - showCaption: false
+    year: 0
     width: 2.0
-  - image: ../assets/mindgames_2022.jpg
-    caption: mindgame
-    showCaption: true
-    year: 2022
-    width: 2.6
-  - image: ../assets/jaemiplastic_2022.png
-    caption: jaemi
-    showCaption: true
-    year: 2022
-    width: 2.8
-  - year: 2021
-    width: 2.3
-    caption: chunky sunset
+    caption: bug 1.1
+    image: ../assets/tattoo_bug1.1.jpg
+  - year: 0
+    width: 2.0
+    image: ../assets/tattoo_bug2.jpg
+    caption: bug 2
     showCaption: false
-    image: ../assets/chunkysunset_2021.jpg
-  - image: ../assets/mobeyond_2021.jpg
-    caption: mo
-    showCaption: true
-    year: 2021
-    width: 2.3
-  - year: 2021
-    width: 2.6
-    caption: guttural
+  - year: 0
+    width: 2.0
+    caption: bug 3
     showCaption: false
-    image: ../assets/guttural_2021.jpg
-  - year: 2020
-    width: 2.5
-    caption: huddle fry
+    image: ../assets/tattoo_bug3.jpg
+  - image: ../assets/tattoo_bug4.jpg
+    caption: bug 4
     showCaption: false
-    image: ../assets/huddlefry_2020.jpg
-  - image: ../assets/obstruct_2020.jpg
-    caption: obstruct
+    year: 0
+    width: 2.0
+  - year: 0
+    width: 2.0
+    caption: gap 1
     showCaption: false
-    year: 2020
-    width: 2.4
-  - year: 2020
-    width: 2.5
-    caption: wrinkle tender
-    showCaption: true
-    image: ../assets/wrinkletender_2020.jpg
-  - year: 2020
-    width: 4.8
-    caption: burnt brick
-    showCaption: true
-    image: ../assets/burntbrick_2020.jpg
+    image: ../assets/tattoo_gap1.jpg
+  - image: ../assets/tattoo_gap2.jpg
+    caption: gap 2
+    showCaption: false
+    year: 0
+    width: 2.0
+  - year: 0
+    width: 2.0
+    caption: gap 3
+    showCaption: false
+    image: ../assets/tattoo_gap3.jpg
+  - year: 0
+    width: 2.0
+    caption: gap 3.1
+    showCaption: false
+    image: ../assets/tattoo_gap3.1.jpg
+  - year: 0
+    width: 2.0
+    caption: gap 7
+    showCaption: false
+    image: ../assets/tattoo_gap7.jpg
+  - image: ../assets/tattoo_bug5.jpg
+    caption: bug 5
+    showCaption: false
+    year: 0
+    width: 2.0
+  - image: ../assets/tattoo_bug7.jpg
+    caption: bug 7
+    showCaption: false
+    year: 0
+    width: 2.0
+  - image: ../assets/tattoo_bug7.1.jpg
+    caption: bug 7.1
+    showCaption: false
+    year: 0
+    width: 2.0
+  - image: ../assets/tattoo_bug7.2.jpg
+    caption: bug 7.2
+    showCaption: false
+    year: 0
+    width: 2.0
+  - image: ../assets/tattoo_bug8.jpg
+    caption: bug 8
+    showCaption: false
+    year: 0
+    width: 2.0
+  - year: 0
+    width: 2.0
+    caption: gap 10
+    showCaption: false
+    image: ../assets/tattoo_gap10.jpg
+  - year: 0
+    width: 2.0
+    caption: gap 456
+    showCaption: false
+    image: ../assets/tattoo_gap456.jpg
+  - year: 0
+    width: 2.0
+    caption: gap 456.1
+    showCaption: false
+    image: ../assets/tattoo_gap456.1.jpg
+  - year: 0
+    width: 2.0
+    caption: garter
+    showCaption: false
+    image: ../assets/tattoo_garter.jpg
+  - year: 0
+    width: 2.0
+    caption: garter2
+    showCaption: false
+    image: ../assets/tattoo_garter2.jpg
+  - year: 0
+    width: 2.0
+    caption: gap 7.2
+    showCaption: false
+    image: ../assets/tattoo_gap7.2.jpg
+  - image: ../assets/tattoo_gap8.jpg
+    caption: gap 8
+    showCaption: false
+    year: 0
+    width: 2.0
+  - image: ../assets/tattoo_gap9.jpg
+    caption: gap 9
+    showCaption: false
+    year: 0
+    width: 2.0
+  - image: ../assets/tattoo_gap9.2.jpg
+    caption: gap 9.2
+    showCaption: false
+    year: 0
+    width: 2.0
+  - image: ../assets/tattoo_gap9.3.jpg
+    caption: gap 9.3
+    showCaption: false
+    year: 0
+    width: 2.0
+  - year: 0
+    width: 2.0
+    caption: garter3
+    showCaption: false
+    image: ../assets/tattoo_garter3.jpg
+  - year: 0
+    width: 2.0
+    caption: layers 1
+    showCaption: false
+    image: ../assets/tattoo_layers1.jpg
+  - year: 0
+    width: 2.0
+    caption: layers 1.1
+    showCaption: false
+    image: ../assets/tattoo_layers1.1.jpg
+  - year: 0
+    width: 2.0
+    caption: loopingtat
+    showCaption: false
+    image: ../assets/tattoo_loopingtat.jpg
+  - year: 0
+    width: 2.0
+    caption: spiky lovebones
+    showCaption: false
+    image: ../assets/tattoo_spikylovebones.jpg
 ---
