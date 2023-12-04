@@ -1,0 +1,55 @@
+{
+  "name": "annika.world",
+  "version": "1.0.0",
+  "private": true,
+  "description": "annika.world",
+  "author": "Joshua Schmidt",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "dev": "gatsby develop --host=127.0.0.1",
+    "start": "yarn dev",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@fontsource/bebas-neue": "^4.5.9",
+    "@fontsource/libre-franklin": "^4.5.11",
+    "@fontsource/secular-one": "^4.5.9",
+    "@mdx-js/react": "^2.2.1",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.7",
+    "gatsby": "^5.5.0",
+    "gatsby-plugin-google-gtag": "^5.5.0",
+    "gatsby-plugin-image": "^3.5.0",
+    "gatsby-plugin-manifest": "^5.5.0",
+    "gatsby-plugin-material-ui": "^4.1.0",
+    "gatsby-plugin-mdx": "^5.5.0",
+    "gatsby-plugin-netlify": "^5.1.0",
+    "gatsby-plugin-netlify-cms": "^7.5.0",
+    "gatsby-plugin-sharp": "^5.5.0",
+    "gatsby-plugin-sitemap": "^6.5.0",
+    "gatsby-source-filesystem": "^5.5.0",
+    "gatsby-theme-material-ui": "^5.3.0",
+    "gatsby-transformer-remark": "^6.5.0",
+    "gatsby-transformer-sharp": "^5.5.0",
+    "netlify-cms-app": "^2.15.72",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-material-ui-carousel": "^3.4.2",
+    "react-player": "^2.11.2",
+    "showdown": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@types/showdown": "^2.0.0",
+    "typescript": "^4.9.4"
+  }
+}

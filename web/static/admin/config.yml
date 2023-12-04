@@ -1,0 +1,150 @@
+backend:
+  name: github
+  repo: jschmidtnj/annika.world
+  branch: main
+
+site_url: https://annika.world
+display_url: https://annika.world
+
+locale: en
+media_folder: ''
+
+collections:
+  - name: pages
+    label: Pages
+    media_folder: ../assets
+    public_folder: ../assets
+    files:
+      - label: "Art Page"
+        name: "art"
+        file: "web/content/pages/art.md"
+        fields:
+          - name: images
+            label: Images
+            widget: list
+            fields:
+              - name: caption
+                label: Caption
+                widget: string
+              - name: showCaption
+                label: Show Caption
+                widget: boolean
+                default: true
+              - name: image
+                label: Image
+                widget: image
+              - name: year
+                label: Year
+                widget: number
+                value_type: int
+                default: 2023
+              - name: width
+                label: Width
+                widget: number
+                value_type: float
+                min: 0
+                max: 12
+                default: 3
+      - label: "Tattoo Page"
+        name: "tattoo"
+        file: "web/content/pages/tattoo.md"
+        fields:
+          - name: description
+            label: Description
+            widget: markdown
+          - name: images
+            label: Images
+            widget: list
+            fields:
+              - name: caption
+                label: Caption
+                widget: string
+              - name: showCaption
+                label: Show Caption
+                widget: boolean
+                default: true
+              - name: image
+                label: Image
+                widget: image
+              - name: year
+                label: Year
+                widget: number
+                value_type: int
+                default: 2023
+              - name: width
+                label: Width
+                widget: number
+                value_type: float
+                min: 0
+                max: 12
+                default: 3
+      - label: "About Page"
+        name: "about"
+        file: "web/content/pages/about.md"
+        fields:
+          - name: image
+            label: Image
+            widget: image
+          - name: biography
+            label: Biography
+            widget: markdown
+          - name: education
+            label: Education
+            widget: markdown
+          - name: awards
+            label: Awards
+            widget: markdown
+          - name: images
+            label: Images
+            widget: list
+            fields:
+              - name: caption
+                label: Caption
+                widget: string
+              - name: showCaption
+                label: Show Caption
+                widget: boolean
+                default: true
+              - name: image
+                label: Image
+                widget: image
+              - name: year
+                label: Year
+                widget: number
+                value_type: int
+                default: 2023
+              - name: width
+                label: Width
+                widget: number
+                value_type: float
+                min: 0
+                max: 12
+                default: 3
+  - name: uploads
+    label: Uploads
+    label_singular: Upload
+    media_folder: ../../static
+    public_folder: ../../static
+    files:
+      - label: "Reel"
+        name: "reel"
+        file: "web/content/uploads/reel.md"
+        fields:
+          - label: "Video"
+            name: "video"
+            widget: "file"
+            default: "web/static/reel.mp4"
+            media_library:
+              allow_multiple: false
+              choose_url: false
+      - label: "Reel 2"
+        name: "reel2"
+        file: "web/content/uploads/reel2.md"
+        fields:
+          - label: "Video"
+            name: "video"
+            widget: "file"
+            default: "web/static/reel2.mp4"
+            media_library:
+              allow_multiple: false
+              choose_url: false
