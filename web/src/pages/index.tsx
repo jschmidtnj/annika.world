@@ -75,6 +75,7 @@ const HomePage: React.FC<PageProps<HomeData>> = (props) => {
                   alt={img.caption}
                   image={img.image!}
                   imgStyle={{ transition: 'none' }}
+                  loading="eager"
                 />
               </Box>
             ))}
@@ -116,6 +117,7 @@ const HomePage: React.FC<PageProps<HomeData>> = (props) => {
               alt={props.data.site.siteMetadata.title}
               image={homeLogo!}
               imgStyle={{ transition: 'none' }}
+              loading="eager"
             />
           </Box>
         </Box>
