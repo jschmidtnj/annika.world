@@ -48,11 +48,11 @@ awards: >-
 images:
   - showCaption: false
     year: 2023
-    width: 1
+    width: 0.8
     caption: " "
     image: ../assets/2d1a2046-7388-460a-876a-b028040e58da-2.jpeg
   - year: 2023
-    width: 1
+    width: 0.8
     image: ../assets/755679d1-818c-4717-a97d-5afd05e08d91-3.jpeg
     caption: " "
     showCaption: false
@@ -85,14 +85,14 @@ images:
     caption: " "
     showCaption: false
     year: 2022
-    width: 1
+    width: 0.8
   - image: ../assets/jaemiplastic_2022.png
     caption: " "
     showCaption: false
     year: 2022
-    width: 1
+    width: 0.8
   - year: 2021
-    width: 1
+    width: 0.8
     caption: " "
     showCaption: false
     image: ../assets/theordinaryinstant.png
