@@ -54,12 +54,12 @@ images:
     caption: impalate
     showCaption: false
     year: 2022
-    width: 2
+    width: 3
   - image: ../assets/mindgames_2022.jpg
     caption: mindgame
     showCaption: true
     year: 2022
-    width: 3
+    width: 4
   - image: ../assets/jaemiplastic_2022.png
     caption: jaemi
     showCaption: true
