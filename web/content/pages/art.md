@@ -59,12 +59,12 @@ images:
     caption: mindgame
     showCaption: true
     year: 2022
-    width: 2
+    width: 3
   - image: ../assets/jaemiplastic_2022.png
     caption: jaemi
     showCaption: true
     year: 2022
-    width: 2.8
+    width: 3
   - year: 2021
     width: 2.3
     caption: chunky sunset
