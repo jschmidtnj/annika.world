@@ -66,7 +66,7 @@ images:
     year: 2022
     width: 3
   - year: 2021
-    width: 2.3
+    width: 2
     caption: chunky sunset
     showCaption: false
     image: ../assets/chunkysunset_2021.jpg
