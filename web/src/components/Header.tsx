@@ -164,6 +164,7 @@ const Header: React.FC<StackProps> = (props) => {
                 "-webkit-text-stroke-width": "1px",
                 "-webkit-text-stroke-color": "white",
               },
+            component: "div"
           }}
         >
           {!isOpen ? null : <Social siteMetadata={data.site.siteMetadata} />}
