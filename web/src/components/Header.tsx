@@ -89,7 +89,7 @@ const Header: React.FC<StackProps> = (props) => {
   `);
   return (
     <Stack
-      mt={4}
+      py={2}
       direction={{ md: "row" }}
       justifyContent="space-between"
       width="100%"
@@ -160,10 +160,10 @@ const Header: React.FC<StackProps> = (props) => {
             sx: !isStarStyle
               ? undefined
               : {
-                  "-webkit-text-fill-color": "black",
-                  "-webkit-text-stroke-width": "1px",
-                  "-webkit-text-stroke-color": "white",
-                },
+                "-webkit-text-fill-color": "black",
+                "-webkit-text-stroke-width": "1px",
+                "-webkit-text-stroke-color": "white",
+              },
           }}
         >
           {!isOpen ? null : <Social siteMetadata={data.site.siteMetadata} />}
