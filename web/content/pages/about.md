@@ -13,7 +13,7 @@ biography: >-
   Annika utilizes a deeply layered approach to storytelling, intensifying visual and musical narratives through a process of fragmentation and collage, in order to evoke variable states of consciousness and subjectivities in perception. The result is a bold and energized body of work inviting dissection. 
 
 
-  Annika’s interdisciplinary undergraduate concentration studies the intersection of filmmaking, psychology, philosophy, multimedia art, and writing, which ultimately guides them to produce artworks which probe the mind.
+  Annika graduated from NYU Gallatin School of Individualized Study with double honors in their interdisciplinary concentration. Their degree specializes in the intersection of filmmaking, psychology, philosophy, multimedia art, and writing, which ultimately guides them to produce artworks which probe the mind.
 
 
   Annika’s artistic practices outside of filmmaking include tattooing, poetry and prose, comics, music production, DJing, fine art, and textile design.
@@ -61,21 +61,6 @@ images:
     image: ../assets/a26dff0a-9eee-4c9c-bf5b-ea592891fd57.jpeg
     caption: " "
     showCaption: false
-  - year: 2023
-    width: 2
-    caption: " "
-    showCaption: false
-    image: ../assets/selfportraitsmiling_2023.jpg
-  - image: ../assets/actualangeloatmeals-drained.jpg
-    caption: " "
-    showCaption: false
-    year: 2022
-    width: 1
-  - image: ../assets/car.jpg
-    caption: " "
-    showCaption: false
-    year: 2022
-    width: 1
   - image: ../assets/impalate_2022.jpg
     caption: " "
     showCaption: false
@@ -86,14 +71,4 @@ images:
     showCaption: false
     year: 2022
     width: 0.8
-  - image: ../assets/jaemiplastic_2022.png
-    caption: " "
-    showCaption: false
-    year: 2022
-    width: 0.8
-  - year: 2021
-    width: 0.8
-    caption: " "
-    showCaption: false
-    image: ../assets/theordinaryinstant.png
 ---
