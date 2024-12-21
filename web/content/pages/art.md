@@ -1,6 +1,66 @@
 ---
 images:
   - showCaption: true
+    year: 2024
+    width: 3
+    image: ../assets/img_2444.jpg
+    caption: valbona
+  - showCaption: true
+    year: 2024
+    width: 3
+    image: ../assets/img_2281.jpg
+    caption: valbona
+  - showCaption: true
+    year: 2024
+    width: 3
+    image: ../assets/img_2069.jpg
+    caption: valbona
+  - showCaption: false
+    year: 2024
+    width: 4
+    image: ../assets/img_1851.jpg
+    caption: turnip field
+  - showCaption: false
+    year: 2024
+    width: 4
+    image: ../assets/img_1806.jpg
+    caption: emma grass
+  - showCaption: false
+    year: 2024
+    width: 3
+    image: ../assets/img_1900.jpg
+    caption: dog butt
+  - showCaption: true
+    year: 2024
+    width: 3
+    image: ../assets/img_1790.jpg
+    caption: emma
+  - showCaption: false
+    year: 2024
+    width: 4
+    image: ../assets/img_1753.jpg
+    caption: dirt heap
+  - showCaption: false
+    year: 2024
+    width: 4
+    image: ../assets/img_1771.jpg
+    caption: emma hunter
+  - showCaption: true
+    year: 2024
+    width: 3
+    image: ../assets/img_4478.jpeg
+    caption: cerebral fission, or welcome home
+  - showCaption: true
+    year: 2024
+    width: 4
+    caption: cerebral fission, or welcome home
+    image: ../assets/img_4116.jpeg
+  - showCaption: true
+    year: 2023
+    width: 3
+    caption: cerebral fission, or welcome home
+    image: ../assets/img_3448.jpeg
+  - showCaption: true
     year: 2023
     width: 3
     caption: shock
