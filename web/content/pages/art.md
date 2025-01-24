@@ -2,17 +2,17 @@
 images:
   - showCaption: true
     year: 2024
-    width: 3
+    width: 3.4
     image: ../assets/img_2444.jpg
     caption: valbona
   - showCaption: true
     year: 2024
-    width: 3
+    width: 3.3
     image: ../assets/img_2281.jpg
     caption: valbona
   - showCaption: true
     year: 2024
-    width: 3
+    width: 3.3
     image: ../assets/img_2069.jpg
     caption: valbona
   - showCaption: false
@@ -27,12 +27,12 @@ images:
     caption: emma grass
   - showCaption: false
     year: 2024
-    width: 3
+    width: 0
     image: ../assets/img_1900.jpg
     caption: dog butt
   - showCaption: true
     year: 2024
-    width: 3
+    width: 1
     image: ../assets/img_1790.jpg
     caption: emma
   - showCaption: false
@@ -77,16 +77,16 @@ images:
     caption: the ordinary instant
   - showCaption: true
     year: 2021
-    width: 2
+    width: 4
     image: ../assets/1nate.png
     caption: grief red
   - showCaption: true
     year: 2023
-    width: 2
+    width: 3
     caption: side sleep tutorial
     image: ../assets/actualangeloatmeals_drained.jpg
   - year: 2023
-    width: 2
+    width: 4
     image: ../assets/selfportrait.jpg
     caption: pink ice
     showCaption: true
@@ -109,7 +109,7 @@ images:
     caption: polarwear
     showCaption: true
     year: 2022
-    width: 4
+    width: 3
   - image: ../assets/impalate_2022.jpg
     caption: impalate
     showCaption: false
@@ -119,7 +119,7 @@ images:
     caption: mindgame
     showCaption: true
     year: 2022
-    width: 4
+    width: 2
   - image: ../assets/jaemiplastic_2022.png
     caption: jaemi
     showCaption: true
