@@ -48,16 +48,16 @@ awards: >-
 images:
   - showCaption: false
     year: 2023
-    width: 0.8
+    width: 2
     caption: " "
     image: ../assets/2d1a2046-7388-460a-876a-b028040e58da-2.jpeg
   - year: 2023
-    width: 0.8
+    width: 1.5
     image: ../assets/755679d1-818c-4717-a97d-5afd05e08d91-3.jpeg
     caption: " "
     showCaption: false
   - year: 2023
-    width: 2
+    width: 3
     image: ../assets/a26dff0a-9eee-4c9c-bf5b-ea592891fd57.jpeg
     caption: " "
     showCaption: false
@@ -65,10 +65,10 @@ images:
     caption: " "
     showCaption: false
     year: 2022
-    width: 1
+    width: 2
   - image: ../assets/loopingtat.png
     caption: " "
     showCaption: false
     year: 2022
-    width: 0.8
+    width: 1.5
 ---
