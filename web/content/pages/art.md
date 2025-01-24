@@ -27,12 +27,12 @@ images:
     caption: emma grass
   - showCaption: false
     year: 2024
-    width: 0
+    width: 2
     image: ../assets/img_1900.jpg
     caption: dog butt
   - showCaption: true
     year: 2024
-    width: 1
+    width: 2
     image: ../assets/img_1790.jpg
     caption: emma
   - showCaption: false
@@ -91,12 +91,12 @@ images:
     caption: pink ice
     showCaption: true
   - year: 2023
-    width: 4
+    width: 3.5
     image: ../assets/gummybear.jpg
     caption: Gummy bear
     showCaption: true
   - year: 2023
-    width: 4
+    width: 3
     caption: self portrait smiling
     showCaption: true
     image: ../assets/selfportraitsmiling_2023.jpg
@@ -104,7 +104,7 @@ images:
     caption: streakcyber
     showCaption: false
     year: 2022
-    width: 2
+    width: 3.5
   - image: ../assets/polarwear_2022.jpg
     caption: polarwear
     showCaption: true
@@ -124,7 +124,7 @@ images:
     caption: jaemi
     showCaption: true
     year: 2022
-    width: 3
+    width: 2
   - year: 2021
     width: 2
     caption: chunky sunset
@@ -134,14 +134,14 @@ images:
     caption: mo
     showCaption: true
     year: 2021
-    width: 2.3
+    width: 2
   - year: 2021
-    width: 2.6
+    width: 4
     caption: guttural
     showCaption: false
     image: ../assets/guttural_2021.jpg
   - year: 2020
-    width: 2.5
+    width: 2
     caption: huddle fry
     showCaption: false
     image: ../assets/huddlefry_2020.jpg
@@ -149,14 +149,14 @@ images:
     caption: obstruct
     showCaption: false
     year: 2020
-    width: 2.4
+    width: 3
   - year: 2020
-    width: 2.5
+    width: 3.5
     caption: wrinkle tender
     showCaption: true
     image: ../assets/wrinkletender_2020.jpg
   - year: 2020
-    width: 4.8
+    width: 3.5
     caption: burnt brick
     showCaption: true
     image: ../assets/burntbrick_2020.jpg
