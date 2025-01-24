@@ -77,7 +77,7 @@ images:
     caption: the ordinary instant
   - showCaption: true
     year: 2021
-    width: 4
+    width: 3.5
     image: ../assets/1nate.png
     caption: grief red
   - showCaption: true
@@ -86,7 +86,7 @@ images:
     caption: side sleep tutorial
     image: ../assets/actualangeloatmeals_drained.jpg
   - year: 2023
-    width: 4
+    width: 3.5
     image: ../assets/selfportrait.jpg
     caption: pink ice
     showCaption: true
