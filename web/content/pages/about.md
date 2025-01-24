@@ -48,27 +48,27 @@ awards: >-
 images:
   - showCaption: false
     year: 2023
-    width: 2
-    caption: " "
+    width: 1.754812544
+    caption: " image 1"
     image: ../assets/2d1a2046-7388-460a-876a-b028040e58da-2.jpeg
   - year: 2023
-    width: 1.5
+    width: 1.561057731
     image: ../assets/755679d1-818c-4717-a97d-5afd05e08d91-3.jpeg
-    caption: " "
+    caption: "  image 2"
     showCaption: false
   - year: 2023
-    width: 3
+    width: 3.119666745
     image: ../assets/a26dff0a-9eee-4c9c-bf5b-ea592891fd57.jpeg
-    caption: " "
+    caption: "  image 3"
     showCaption: false
   - image: ../assets/impalate_2022.jpg
-    caption: " "
+    caption: "  image 4"
     showCaption: false
     year: 2022
-    width: 2
+    width: 2.339750059
   - image: ../assets/loopingtat.png
-    caption: " "
+    caption: "  image 5"
     showCaption: false
     year: 2022
-    width: 1.5
+    width: 1.224712921
 ---
