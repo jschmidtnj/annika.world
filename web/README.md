@@ -1,8 +1,7 @@
 # web content
 
-## getting started lfs
+## getting started
 
-1. install netlify cli: `npm i -g netlify-cli`
-2. login: `netlify login`
-3. link: `netlify link`
-4. setup git lfs: `netlify lm:setup`
+1. Set up git lfs: `git lfs install`
+2. Install yarn packages: `yarn install`
+3. Run website: `yarn dev`
