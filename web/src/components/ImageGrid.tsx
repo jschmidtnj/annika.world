@@ -7,6 +7,9 @@ import Grid from "@mui/material/Unstable_Grid2";
 import { Box, Typography } from "@mui/material";
 import { getFontFamily } from "../utils";
 
+const numColumns = 10;
+const maxWidthSingleImage = "28rem";
+
 export interface ImageMetadata {
   caption: string;
   showCaption: boolean;
@@ -24,7 +27,7 @@ const Image: React.FC<{
       xs={12}
       sm={12}
       md={props.metadata.width}
-      maxWidth="40rem"
+      maxWidth={props.metadata.width === numColumns ? maxWidthSingleImage : undefined}
       onMouseEnter={() => setActive(true)}
       onMouseLeave={() => setActive(false)}
     >
@@ -68,19 +71,36 @@ const Image: React.FC<{
   );
 };
 
+const CenterImage = (image: JSX.Element): JSX.Element => (
+  <Box
+    display="flex"
+    minWidth="100%"
+    justifyContent="center"
+  >{image}</Box>
+);
+
 const ImageGrid: React.FC<{
   images: IGatsbyImageData[];
   metadata: ImageMetadata[];
 }> = (props) => {
   return (
-    <Grid container mt={4} rowSpacing={1.5} columns={10} columnSpacing={1} justifyContent="center">
-      {props.images.map((image, idx) => (
-        <Image
-          image={image}
-          key={`image-${props.metadata[idx].caption}`}
-          metadata={props.metadata[idx]}
-        />
-      ))}
+    <Grid container mt={4} rowSpacing={1.5} columns={numColumns} columnSpacing={1} justifyContent="center">
+      {props.images.map((image, idx) => {
+        const metadata = props.metadata[idx];
+
+        const image_element =
+          <Image
+            image={image}
+            key={`image-${metadata.caption}`}
+            metadata={metadata}
+          />;
+
+        if (metadata.width === numColumns) {
+          return CenterImage(image_element);
+        }
+
+        return image_element;
+      })}
     </Grid>
   );
 };
