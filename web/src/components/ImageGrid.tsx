@@ -24,6 +24,7 @@ const Image: React.FC<{
       xs={12}
       sm={12}
       md={props.metadata.width}
+      maxWidth="40rem"
       onMouseEnter={() => setActive(true)}
       onMouseLeave={() => setActive(false)}
     >
@@ -58,7 +59,7 @@ const Image: React.FC<{
         style={{
           height: "100%",
           opacity: !active ? undefined : (!props.metadata.year && !props.metadata.showCaption) ? 0.9 : 0.3,
-          transition: "0.25s ease",
+          transition: "0.25s ease"
         }}
         alt={props.metadata.caption}
         image={props.image!}
@@ -72,7 +73,7 @@ const ImageGrid: React.FC<{
   metadata: ImageMetadata[];
 }> = (props) => {
   return (
-    <Grid container mt={4} rowSpacing={1.5} columns={10} columnSpacing={1}>
+    <Grid container mt={4} rowSpacing={1.5} columns={10} columnSpacing={1} justifyContent="center">
       {props.images.map((image, idx) => (
         <Image
           image={image}
