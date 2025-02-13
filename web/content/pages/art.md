@@ -213,11 +213,6 @@ images:
   - showCaption: true
     year: 2023
     width: 10
-    caption: barendorfer
-    image: ../assets/barendorferstill.png
-  - showCaption: true
-    year: 2023
-    width: 10
     image: ../assets/theordinaryinstant.png
     caption: the ordinary instant
   - showCaption: true
