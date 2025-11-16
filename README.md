@@ -2,7 +2,7 @@
 
 Welcome to my GitHub profile!  
 
-I’m a **16-year-old engineer, student, cosmologist, hacker, and cybersecurity enthusiast**.  
+I’m a **engineer, student, cosmologist, hacker, and cybersecurity enthusiast**.  
 
 💻 Check out my live website here:  
 [🌐 Visit My Portfolio](https://anish-kushwaha.github.io/)
@@ -13,8 +13,7 @@ I’m a **16-year-old engineer, student, cosmologist, hacker, and cybersecurity 
 
 - 🔭 I’m currently working on **penetration testing, cybersecurity projects, and network security tools**.  
 - 🌱 I’m learning advanced **Python, Metasploit, and ethical hacking techniques**.  
-- 🎯 Goal: Build tools for **automated vulnerability scanning and network security analysis**.  
-- ⚡ Fun fact: I can **control my sweating consciously**, like a biofeedback master!  
+- 🎯 Goal: Build tools for **automated vulnerability scanning and network security analysis**.
 
 ---
 
