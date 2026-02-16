@@ -13,11 +13,6 @@ images:
   - showCaption: false
     year: 2024
     width: 10
-    image: ../assets/feb_2025_img28.jpg
-    caption: budva
-  - showCaption: false
-    year: 2024
-    width: 10
     image: ../assets/feb_2025_img18.jpg
     caption: barendorf
   - showCaption: false
@@ -25,6 +20,16 @@ images:
     width: 10
     image: ../assets/feb_2025_img25.jpg
     caption: barendorf
+  - showCaption: true
+    year: 2025
+    width: 10
+    image: ../assets/img_3493.jpeg
+    caption: gateway
+  - showCaption: false
+    year: 2024
+    width: 10
+    image: ../assets/feb_2025_img28.jpg
+    caption: budva
   - showCaption: false
     year: 2024
     width: 10
