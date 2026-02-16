@@ -48,13 +48,8 @@ images:
   - showCaption: false
     year: 2024
     width: 10
-    image: ../assets/feb_2025_img24.jpg
-    caption: barendorf
-  - showCaption: false
-    year: 2024
-    width: 10
-    image: ../assets/feb_2025_img26.jpg
-    caption: barendorf
+    image: ../assets/feb_2025_img4.jpg
+    caption: valbona
   - showCaption: false
     year: 2024
     width: 10
@@ -68,17 +63,27 @@ images:
   - showCaption: false
     year: 2024
     width: 10
+    image: ../assets/feb_2025_img24.jpg
+    caption: barendorf
+  - showCaption: false
+    year: 2024
+    width: 10
+    image: ../assets/feb_2025_img26.jpg
+    caption: barendorf
+  - showCaption: false
+    year: 2024
+    width: 10
     image: ../assets/feb_2025_img27.jpg
     caption: barendorf
   - showCaption: false
     year: 2024
     width: 10
-    image: ../assets/feb_2025_img1.jpg
+    image: ../assets/feb_2025_img20.jpg
     caption: valbona
   - showCaption: false
     year: 2024
     width: 10
-    image: ../assets/feb_2025_img20.jpg
+    image: ../assets/feb_2025_img1.jpg
     caption: valbona
   - showCaption: false
     year: 2024
@@ -98,11 +103,6 @@ images:
   - showCaption: false
     year: 2024
     width: 10
-    image: ../assets/feb_2025_img12.jpg
-    caption: barendorf
-  - showCaption: false
-    year: 2024
-    width: 10
     image: ../assets/feb_2025_img10.jpg
     caption: valbona
   - showCaption: false
@@ -115,11 +115,6 @@ images:
     width: 10
     image: ../assets/feb_2025_img6.jpg
     caption: budva
-  - showCaption: false
-    year: 2024
-    width: 10
-    image: ../assets/feb_2025_img4.jpg
-    caption: valbona
   - showCaption: false
     year: 2024
     width: 10
