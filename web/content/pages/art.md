@@ -1,195 +1,135 @@
 ---
 images:
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img29.jpg
-    caption: Feb 2025 image29
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img28.jpg
-    caption: Feb 2025 image28
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img27.jpg
-    caption: Feb 2025 image27
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img26.jpg
-    caption: Feb 2025 image26
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img25.jpg
-    caption: Feb 2025 image25
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img24.jpg
-    caption: Feb 2025 image24
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img23.jpg
-    caption: Feb 2025 image23
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img22.jpg
-    caption: Feb 2025 image22
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img21.jpg
-    caption: Feb 2025 image21
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img20.jpg
-    caption: Feb 2025 image20
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img19.jpg
-    caption: Feb 2025 image19
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img18.jpg
-    caption: Feb 2025 image18
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img17.jpg
-    caption: Feb 2025 image17
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img16.jpg
-    caption: Feb 2025 image16
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img15.jpg
-    caption: Feb 2025 image15
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img14.jpg
-    caption: Feb 2025 image14
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img13.jpg
-    caption: Feb 2025 image13
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img12.jpg
-    caption: Feb 2025 image12
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img11.jpg
-    caption: Feb 2025 image11
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img10.jpg
-    caption: Feb 2025 image10
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img9.jpg
-    caption: Feb 2025 image9
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img8.jpg
-    caption: Feb 2025 image8
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img7.jpg
-    caption: Feb 2025 image7
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img6.jpg
-    caption: Feb 2025 image6
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img5.jpg
-    caption: Feb 2025 image5
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img4.jpg
-    caption: Feb 2025 image4
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img3.jpg
-    caption: Feb 2025 image3
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img2.jpg
-    caption: Feb 2025 image2
-  - showCaption: false
-    year: 2025
-    width: 10
-    image: ../assets/feb_2025_img1.jpg
-    caption: Feb 2025 image1
   - showCaption: true
     year: 2024
     width: 10
     image: ../assets/img_2444.jpg
     caption: valbona
-  - showCaption: true
+  - showCaption: false
     year: 2024
     width: 10
-    image: ../assets/img_2281.jpg
+    image: ../assets/feb_2025_img15.jpg
+    caption: valbona
+  - showCaption: false
+    year: 2024
+    width: 10
+    image: ../assets/feb_2025_img28.jpg
+    caption: budva
+  - showCaption: false
+    year: 2024
+    width: 10
+    image: ../assets/feb_2025_img18.jpg
+    caption: barendorf
+  - showCaption: false
+    year: 2024
+    width: 10
+    image: ../assets/feb_2025_img25.jpg
+    caption: barendorf
+  - showCaption: false
+    year: 2024
+    width: 10
+    image: ../assets/feb_2025_img16.jpg
+    caption: valbona
+  - showCaption: false
+    year: 2024
+    width: 10
+    image: ../assets/feb_2025_img5.jpg
+    caption: valbona
+  - showCaption: false
+    year: 2024
+    width: 10
+    image: ../assets/feb_2025_img7.jpg
+    caption: valbona
+  - showCaption: false
+    year: 2024
+    width: 10
+    image: ../assets/feb_2025_img14.jpg
+    caption: budva
+  - showCaption: false
+    year: 2024
+    width: 10
+    image: ../assets/feb_2025_img24.jpg
+    caption: barendorf
+  - showCaption: false
+    year: 2024
+    width: 10
+    image: ../assets/feb_2025_img26.jpg
+    caption: barendorf
+  - showCaption: false
+    year: 2024
+    width: 10
+    image: ../assets/feb_2025_img19.jpg
+    caption: valbona
+  - showCaption: false
+    year: 2024
+    width: 10
+    image: ../assets/feb_2025_img22.jpg
+    caption: barendorf
+  - showCaption: false
+    year: 2024
+    width: 10
+    image: ../assets/feb_2025_img27.jpg
+    caption: barendorf
+  - showCaption: false
+    year: 2024
+    width: 10
+    image: ../assets/feb_2025_img1.jpg
+    caption: valbona
+  - showCaption: false
+    year: 2024
+    width: 10
+    image: ../assets/feb_2025_img20.jpg
+    caption: valbona
+  - showCaption: false
+    year: 2024
+    width: 10
+    image: ../assets/feb_2025_img21.jpg
+    caption: valbona
+  - showCaption: false
+    year: 2024
+    width: 10
+    image: ../assets/feb_2025_img13.jpg
+    caption: valbona
+  - showCaption: false
+    year: 2024
+    width: 10
+    image: ../assets/feb_2025_img23.jpg
+    caption: valbona
+  - showCaption: false
+    year: 2024
+    width: 10
+    image: ../assets/feb_2025_img12.jpg
+    caption: barendorf
+  - showCaption: false
+    year: 2024
+    width: 10
+    image: ../assets/feb_2025_img10.jpg
+    caption: valbona
+  - showCaption: false
+    year: 2024
+    width: 10
+    image: ../assets/feb_2025_img8.jpg
+    caption: valbona
+  - showCaption: false
+    year: 2024
+    width: 10
+    image: ../assets/feb_2025_img6.jpg
+    caption: budva
+  - showCaption: false
+    year: 2024
+    width: 10
+    image: ../assets/feb_2025_img4.jpg
+    caption: valbona
+  - showCaption: false
+    year: 2024
+    width: 10
+    image: ../assets/feb_2025_img2.jpg
     caption: valbona
   - showCaption: true
     year: 2024
     width: 10
     image: ../assets/img_2069.jpg
     caption: valbona
-  - showCaption: false
-    year: 2024
-    width: 10
-    image: ../assets/img_1851.jpg
-    caption: turnip field
-  - showCaption: false
-    year: 2024
-    width: 10
-    image: ../assets/img_1806.jpg
-    caption: emma grass
-  - showCaption: false
-    year: 2024
-    width: 10
-    image: ../assets/img_1900.jpg
-    caption: dog butt
-  - showCaption: true
-    year: 2024
-    width: 10
-    image: ../assets/img_1790.jpg
-    caption: emma
-  - showCaption: false
-    year: 2024
-    width: 10
-    image: ../assets/img_1753.jpg
-    caption: dirt heap
-  - showCaption: false
-    year: 2024
-    width: 10
-    image: ../assets/img_1771.jpg
-    caption: emma hunter
   - showCaption: true
     year: 2024
     width: 10
