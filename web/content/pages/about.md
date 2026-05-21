@@ -1,22 +1,14 @@
 ---
 image: ../assets/medirecting.jpg
 biography: >-
-  Annika is a filmmaker, tattoo artist, musician, and multimedia visual artist
-  based in New York. As an emerging writer-director and video editor, Annika is
-  committed to shifting representational paradigms of identities traditionally
-  marginalized in American media. 
+  Annika is a multimedia visual artist, tattooist, photographer/filmmaker, and
+  writer based between New York and Berlin. 
 
 
-  Recurring topics within Annika’s creative practice include queer love and identity, issues of disability and mental health, and constructions of reality and selfhood in a technologized world. Annika’s filmmaking practice tells bold and subversive stories which propagate multidimensional representations—transforming minds and shifting cultural paradigms. 
+  Recurring topics within Annika’s creative practice include human, animal, and environmental relationships; climate change and environmental justice; anticapitalism; queerness; disability justice; and constructions of reality and selfhood in a technologized world. 
 
 
-  Annika utilizes a deeply layered approach to storytelling, intensifying visual and musical narratives through a process of fragmentation and collage, in order to evoke variable states of consciousness and subjectivities in perception. The result is a bold and energized body of work inviting dissection. 
-
-
-  Annika graduated from NYU Gallatin School of Individualized Study with double honors in their interdisciplinary concentration. Their degree specializes in the intersection of filmmaking, psychology, philosophy, multimedia art, and writing, which ultimately guides them to produce artworks which probe the mind.
-
-
-  Annika’s artistic practices outside of filmmaking include tattooing, poetry and prose, comics, music production, DJing, fine art, and textile design.
+  Annika received their Bachelor of Arts in Multimedia Storytelling and States of Consciousness–an interdisciplinary degree combining filmmaking, psychology, philosophy, multimedia art, and writing–from New York University’s Gallatin School of Individualized Study. Annika was awarded Gallatin Honors for exceptional thesis work in climate storytelling, intersectional environmentalism, and disability justice.
 education: >-
   New York University Class of 2024
 
@@ -26,6 +18,26 @@ education: >-
 
   Tisch School of the Arts — Minor in Film
 awards: >-
+  Gallery Shows
+
+
+  “Gallatin Arts Festival 2024”, The Gallatin Galleries, April 14 to April 18, 2024
+
+
+  “To Be a Part and Apart”, The Gallatin Galleries, March 18 to April 5, 2024
+
+
+
+
+  Distinctions
+
+
+  Writer, “Albedo”  Script and “Albedo: Climate & Disability Justice Filmmaking” Interdisciplinary Research Paper, 2024
+
+
+  * A science-driven narrative feature film script, and a companion interdisciplinary research paper on intersectional environmentalism, disability justice, and environmental storytelling. This thesis project was awarded Gallatin Honors, the highest level of honors possible at NYU Gallatin.
+
+
   Author and Illustrator, “Deathpowers” Zine-length Comic Book, 2023
 
 
@@ -36,12 +48,6 @@ awards: >-
 
 
   * A queer body horror short dissecting bodily autonomy. Winner of the NYU Gallatin Film Alliance Pitch Award.
-
-
-  First Assistant Director, Editor “I Do Not Have A Problem Like At All”, 2021
-
-
-  * Semifinalist at the Flickers Rhode Island International Film Festival. 
 
 
   Silver Recognitions for Photographic Excellence, 2019
