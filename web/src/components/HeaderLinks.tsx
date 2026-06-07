@@ -13,6 +13,16 @@ interface PageData {
 
 const pages: PageData[] = [
   {
+    title: "art",
+    path: "/art",
+    accent: "accent.300",
+  },
+  {
+    title: "text",
+    path: "/text",
+    disabled: true,
+  },
+  {
     title: "film",
     path: "/film",
     accent: "accent.100",
@@ -24,9 +34,9 @@ const pages: PageData[] = [
     accent: "accent.200",
   },
   {
-    title: "fine art",
-    path: "/art",
-    accent: "accent.300",
+    title: "bio",
+    path: "/about",
+    accent: "accent.400",
   },
   {
     title: "music",
@@ -34,19 +44,9 @@ const pages: PageData[] = [
     disabled: true,
   },
   {
-    title: "writing",
-    path: "/writing",
-    disabled: true,
-  },
-  {
     title: "shop",
     path: "/shop",
     disabled: true,
-  },
-  {
-    title: "about",
-    path: "/about",
-    accent: "accent.400",
   },
   {
     title: "contact",

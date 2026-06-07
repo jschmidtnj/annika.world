@@ -1,5 +1,4 @@
 import * as React from "react";
-import Grid from "@mui/material/Unstable_Grid2";
 import { graphql, PageProps } from "gatsby";
 import Layout from "../components/Layout";
 import { Box, Stack, Typography, Link, useMediaQuery, useTheme } from "@mui/material";

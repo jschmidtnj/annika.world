@@ -2,7 +2,7 @@ import * as React from "react";
 import { graphql, PageProps } from "gatsby";
 import Layout from "../components/Layout";
 import { Box } from "@mui/material";
-import ReactPlayer from "react-player/lazy";
+import ReactPlayer from "react-player";
 
 interface FilmData {
   reel: {
@@ -24,7 +24,7 @@ const Video: React.FC<{
   <ReactPlayer
     width="100%"
     height="500px"
-    url={props.url}
+    src={props.url}
     controls
     muted
     playing={props.autoplay}

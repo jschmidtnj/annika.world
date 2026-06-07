@@ -1,5 +1,5 @@
 import * as React from "react";
-import Grid from "@mui/material/Unstable_Grid2";
+import Grid from "@mui/material/Grid";
 import { graphql, PageProps } from "gatsby";
 import Layout from "../components/Layout";
 import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image";

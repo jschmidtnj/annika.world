@@ -3,7 +3,7 @@ import {
   GatsbyImage,
   IGatsbyImageData,
 } from "gatsby-plugin-image";
-import Grid from "@mui/material/Unstable_Grid2";
+import Grid from "@mui/material/Grid";
 import { Box, Typography } from "@mui/material";
 import { getFontFamily } from "../utils";
 
