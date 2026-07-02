@@ -20,6 +20,7 @@ export interface ImageMetadata {
 const Image: React.FC<{
   image: IGatsbyImageData;
   metadata: ImageMetadata;
+  onClick?: () => void;
 }> = (props) => {
   const [active, setActive] = React.useState(false);
   return (
@@ -30,10 +31,12 @@ const Image: React.FC<{
         md: props.metadata.width,
       }}
       sx={{
-        maxWidth: props.metadata.width === numColumns ? maxWidthSingleImage : undefined
+        maxWidth: props.metadata.width === numColumns ? maxWidthSingleImage : undefined,
+        cursor: props.onClick ? "pointer" : undefined,
       }}
       onMouseEnter={() => setActive(true)}
       onMouseLeave={() => setActive(false)}
+      onClick={props.onClick}
     >
       {!active ? null : (
         <Box sx={{ position: "relative", top: "40%", zIndex: 1, height: 0 }}>
@@ -93,6 +96,7 @@ const CenterImage = (image: React.ReactElement, key: string): React.ReactElement
 const ImageGrid: React.FC<{
   images: IGatsbyImageData[];
   metadata: ImageMetadata[];
+  onImageClick?: (index: number) => void;
 }> = (props) => {
   return (
     <Grid container sx={{ mt: 4, justifyContent: "center" }} rowSpacing={1.5} columns={numColumns} columnSpacing={1}>
@@ -105,6 +109,7 @@ const ImageGrid: React.FC<{
             image={image}
             key={key}
             metadata={metadata}
+            onClick={props.onImageClick ? () => props.onImageClick?.(idx) : undefined}
           />;
 
         if (metadata.width === numColumns) {
