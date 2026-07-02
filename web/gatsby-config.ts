@@ -31,7 +31,6 @@ const config: GatsbyConfig = {
         }
       }
     },
-    "gatsby-plugin-netlify-cms",
     {
       resolve: "gatsby-plugin-google-gtag",
       options: {
