@@ -32,6 +32,7 @@ const pages: PageData[] = [
     title: "tattoo",
     path: "/tattoo",
     accent: "accent.200",
+    disabled: true,
   },
   {
     title: "bio",

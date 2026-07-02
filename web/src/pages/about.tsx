@@ -54,21 +54,29 @@ const AboutPage: React.FC<PageProps<AboutData>> = (props) => {
   );
   return (
     <Layout>
-      <GatsbyImage alt="about" image={heroImage!} />
       <Grid container sx={{ mt: 4 }} spacing={2}>
         <Grid size={{ xs: 12 }}>
-          <TextCard
-            title="Artist Biography"
-            content={props.data.markdownRemark.frontmatter.biography}
-          />
+          <Box sx={{ display: "block" }}>
+            <Box
+              sx={{
+                float: { xs: "none", sm: "right" },
+                width: { xs: "100%", sm: "40%" },
+                ml: { xs: 0, sm: 4 },
+                mb: { xs: 2, sm: 2 },
+              }}
+            >
+              <GatsbyImage alt="about" image={heroImage!} />
+            </Box>
+            <Markdown>{props.data.markdownRemark.frontmatter.biography}</Markdown>
+          </Box>
         </Grid>
-        <Grid size={{ xs: 12 }}>
+        <Grid size={{ xs: 12 }} sx={{ clear: "both" }}>
           <TextCard
             title="Education"
             content={props.data.markdownRemark.frontmatter.education}
           />
         </Grid>
-        <Grid size={{ xs: 12 }}>
+        <Grid size={{ xs: 12 }} sx={{ clear: "both" }}>
           <TextCard
             title="Distinctions"
             content={props.data.markdownRemark.frontmatter.awards}
