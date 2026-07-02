@@ -40,17 +40,17 @@ const HomePage: React.FC<PageProps<HomeData>> = (props) => {
   );
   return (
     <Container maxWidth="lg">
-      <Box minHeight="100vh" position="relative">
+      <Box sx={{ minHeight: "100vh", position: "relative" }}>
         <Box
-          position="absolute"
-          top="50%"
-          left="50%"
-          width={{
-            xs: "100%",
-            sm: 500,
-            md: 650,
-          }}
           sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            width: {
+              xs: "100%",
+              sm: 500,
+              md: 650,
+            },
             transform: "translate(-50%, -50%)",
           }}
         >
@@ -63,9 +63,11 @@ const HomePage: React.FC<PageProps<HomeData>> = (props) => {
             interval={slideshowInterval}
           >
             {images.map((img) => (
-              <Box height={{
-                xs: 300,
-                sm: 500
+              <Box sx={{
+                height: {
+                  xs: 300,
+                  sm: 500
+                }
               }} key={`image-${img.caption}`}>
                 <GatsbyImage
                   style={{
@@ -82,32 +84,34 @@ const HomePage: React.FC<PageProps<HomeData>> = (props) => {
           </Carousel>
         </Box>
         <Box
-          position="absolute"
-          top="50%"
-          left="50%"
           sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
             transform: "translate(-50%, -50%)",
+            zIndex: 1,
+            width: {
+              xs: undefined,
+              sm: 600,
+              md: 800,
+            },
+            textAlign: "center",
           }}
-          zIndex={1}
-          width={{
-            xs: undefined,
-            sm: 600,
-            md: 800,
-          }}
-          textAlign="center"
         >
           <HeaderLinks
-            mb={4}
+            sx={{ mb: 4 }}
             spacing={4}
             linkProps={{
               variant: "h4",
             }}
           />
           <Box
-            height={{
-              xs: 40,
-              sm: 80,
-              md: 110
+            sx={{
+              height: {
+                xs: 40,
+                sm: 80,
+                md: 110
+              }
             }}
           >
             <GatsbyImage

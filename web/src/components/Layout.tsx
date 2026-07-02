@@ -7,11 +7,11 @@ const Layout: React.FC<{
   children: React.ReactNode;
 }> = (props) => (
   <Container maxWidth="lg">
-    <Box minHeight="100vh">
-      <Header mb={3} />
+    <Box sx={{ minHeight: "100vh" }}>
+      <Header sx={{ mb: 3 }} />
       {props.children}
     </Box>
-    <Copyright my={4} />
+    <Copyright sx={{ my: 4 }} />
   </Container>
 );
 

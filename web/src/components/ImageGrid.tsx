@@ -24,23 +24,29 @@ const Image: React.FC<{
   const [active, setActive] = React.useState(false);
   return (
     <Grid
-      xs={12}
-      sm={12}
-      md={props.metadata.width}
-      maxWidth={props.metadata.width === numColumns ? maxWidthSingleImage : undefined}
+      size={{
+        xs: 12,
+        sm: 12,
+        md: props.metadata.width,
+      }}
+      sx={{
+        maxWidth: props.metadata.width === numColumns ? maxWidthSingleImage : undefined
+      }}
       onMouseEnter={() => setActive(true)}
       onMouseLeave={() => setActive(false)}
     >
       {!active ? null : (
-        <Box position="relative" top="40%" zIndex={1} height={0}>
+        <Box sx={{ position: "relative", top: "40%", zIndex: 1, height: 0 }}>
           {!props.metadata.showCaption ? null : (
             <Typography
-              textTransform="uppercase"
               color="white"
-              fontWeight="bold"
-              textAlign="center"
               variant="h5"
-              fontFamily={getFontFamily("Bebas Neue")}
+              sx={{
+                textTransform: "uppercase",
+                fontWeight: "bold",
+                textAlign: "center",
+                fontFamily: getFontFamily("Bebas Neue"),
+              }}
             >
               {props.metadata.caption}
             </Typography>
@@ -48,10 +54,12 @@ const Image: React.FC<{
           {!props.metadata.year ? null : (
             <Typography
               color="white"
-              fontWeight="bold"
-              textAlign="center"
               variant="h5"
-              fontFamily={getFontFamily("Bebas Neue")}
+              sx={{
+                fontWeight: "bold",
+                textAlign: "center",
+                fontFamily: getFontFamily("Bebas Neue"),
+              }}
             >
               {props.metadata.year}
             </Typography>
@@ -71,11 +79,14 @@ const Image: React.FC<{
   );
 };
 
-const CenterImage = (image: JSX.Element): JSX.Element => (
+const CenterImage = (image: React.ReactElement, key: string): React.ReactElement => (
   <Box
-    display="flex"
-    minWidth="100%"
-    justifyContent="center"
+    key={key}
+    sx={{
+      display: "flex",
+      minWidth: "100%",
+      justifyContent: "center",
+    }}
   >{image}</Box>
 );
 
@@ -84,19 +95,20 @@ const ImageGrid: React.FC<{
   metadata: ImageMetadata[];
 }> = (props) => {
   return (
-    <Grid container mt={4} rowSpacing={1.5} columns={numColumns} columnSpacing={1} justifyContent="center">
+    <Grid container sx={{ mt: 4, justifyContent: "center" }} rowSpacing={1.5} columns={numColumns} columnSpacing={1}>
       {props.images.map((image, idx) => {
         const metadata = props.metadata[idx];
+        const key = `image-${metadata.caption}-${idx}`;
 
         const image_element =
           <Image
             image={image}
-            key={`image-${metadata.caption}`}
+            key={key}
             metadata={metadata}
           />;
 
         if (metadata.width === numColumns) {
-          return CenterImage(image_element);
+          return CenterImage(image_element, key);
         }
 
         return image_element;

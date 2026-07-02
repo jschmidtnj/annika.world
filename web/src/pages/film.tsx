@@ -33,10 +33,10 @@ const Video: React.FC<{
 
 const FilmPage: React.FC<PageProps<FilmData>> = (props) => (
   <Layout>
-    <Box mt={4}>
+    <Box sx={{ mt: 4 }}>
       <Video url={`/${props.data.reel.frontmatter.video}`} autoplay={true} />
     </Box>
-    <Box mt={16}>
+    <Box sx={{ mt: 16 }}>
       <Video url={`/${props.data.reel2.frontmatter.video}`} autoplay={false} />
     </Box>
   </Layout>

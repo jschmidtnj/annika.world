@@ -62,23 +62,26 @@ const HeaderLinks: React.FC<
 > = ({ linkProps, ...props }) => {
   const location = useLocation();
   return (
-    <Stack spacing={0} justifyContent="center" direction="row" {...props}>
+    <Stack spacing={0} direction="row" {...props} sx={{ justifyContent: "center", ...props.sx }}>
       {pages.map((page) =>
         page.disabled ? null : (
           <Link
             to={page.path}
-            marginLeft="10px !important"
             key={`page-link-${page.path}`}
-            textTransform="uppercase"
-            fontFamily={getFontFamily("Bebas Neue")}
             underline="none"
             variant="h5"
-            whiteSpace="nowrap"
             {...linkProps}
             color={
               page.path !== location.pathname
                 ? undefined : page.accent ? page.accent : "accent.light"
             }
+            sx={{
+              marginLeft: "10px !important",
+              textTransform: "uppercase",
+              fontFamily: getFontFamily("Bebas Neue"),
+              whiteSpace: "nowrap",
+              ...linkProps?.sx,
+            }}
           >
             {page.title}
           </Link>

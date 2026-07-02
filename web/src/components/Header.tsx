@@ -40,7 +40,7 @@ const HeartButton: React.FC<{
     <Typography
       color={props.isStar ? "accent.contrastText" : undefined}
       variant="h5"
-      fontWeight={props.isStar ? "bold" : undefined}
+      sx={{ fontWeight: props.isStar ? "bold" : undefined }}
     >
       ♡
     </Typography>
@@ -51,12 +51,12 @@ const Social: React.FC<{
   siteMetadata: HeaderData["site"]["siteMetadata"];
   children?: React.ReactNode;
 }> = (props) => (
-  <Stack direction="row" spacing={1} alignItems="center">
+  <Stack direction="row" spacing={1} sx={{ alignItems: "center" }}>
     {props.children}
-    <ExternalLink target="_blank" pt={1} href={props.siteMetadata.instagram}>
+    <ExternalLink target="_blank" href={props.siteMetadata.instagram} sx={{ pt: 1 }}>
       <InstagramIcon />
     </ExternalLink>
-    <ExternalLink target="_blank" pt={1} href={props.siteMetadata.soundcloud}>
+    <ExternalLink target="_blank" href={props.siteMetadata.soundcloud} sx={{ pt: 1 }}>
       <CloudQueue />
     </ExternalLink>
   </Stack>
@@ -89,24 +89,29 @@ const Header: React.FC<StackProps> = (props) => {
   `);
   return (
     <Stack
-      py={2}
       direction={{ md: "row" }}
-      justifyContent="space-between"
-      width="100%"
       {...props}
+      sx={{
+        py: 2,
+        justifyContent: "space-between",
+        width: "100%",
+        ...props.sx,
+      }}
     >
       <Stack
         direction="row"
-        alignItems="center"
         spacing={2}
-        width={{
-          xs: "100%",
-          sm: undefined,
-        }}
-        justifyContent={{
-          xs: "space-between",
-          sm: "center",
-          md: "flex-start",
+        sx={{
+          alignItems: "center",
+          width: {
+            xs: "100%",
+            sm: undefined,
+          },
+          justifyContent: {
+            xs: "space-between",
+            sm: "center",
+            md: "flex-start",
+          },
         }}
       >
         {!isNotSmall ? (
@@ -118,13 +123,15 @@ const Header: React.FC<StackProps> = (props) => {
         )}
         <Link
           to="/"
-          fontWeight="bold"
-          textTransform="uppercase"
-          fontFamily={getFontFamily("Secular One")}
           variant="h4"
           underline="none"
-          whiteSpace="nowrap"
           color={isStarStyle ? "accent.contrastText" : undefined}
+          sx={{
+            fontWeight: "bold",
+            textTransform: "uppercase",
+            fontFamily: getFontFamily("Secular One"),
+            whiteSpace: "nowrap",
+          }}
         >
           {data.site.siteMetadata.title}
         </Link>
@@ -142,8 +149,8 @@ const Header: React.FC<StackProps> = (props) => {
           >
             <Typography
               color={isStarStyle ? "accent.contrastText" : undefined}
-              fontWeight={isStarStyle ? "bold" : undefined}
               variant="h5"
+              sx={{ fontWeight: isStarStyle ? "bold" : undefined }}
             >
               ☆
             </Typography>
@@ -153,17 +160,21 @@ const Header: React.FC<StackProps> = (props) => {
       {!isOpen && !isNotSmall ? null : (
         <HeaderLinks
           direction={{ xs: "column", sm: "row" }}
-          alignItems={{ xs: "center", sm: "flex-end" }}
+          sx={{
+            alignItems: { xs: "center", sm: "flex-end" },
+          }}
           linkProps={{
-            textAlign: "center",
             variant: isNotSmall ? "h5" : !isStarStyle ? "h4" : "h3",
-            sx: !isStarStyle
-              ? undefined
-              : {
-                "-webkit-text-fill-color": "black",
-                "-webkit-text-stroke-width": "1px",
-                "-webkit-text-stroke-color": "white",
-              },
+            sx: {
+              textAlign: "center",
+              ...(!isStarStyle
+                ? {}
+                : {
+                  "-webkit-text-fill-color": "black",
+                  "-webkit-text-stroke-width": "1px",
+                  "-webkit-text-stroke-color": "white",
+                }),
+            },
           }}
         >
           {!isOpen ? null : <Social siteMetadata={data.site.siteMetadata} />}

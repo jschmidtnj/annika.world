@@ -40,7 +40,7 @@ const TattooPage: React.FC<PageProps<TattooData>> = (props) => {
   );
   return (
     <Layout>
-      <Typography fontWeight="bold" textAlign="center">
+      <Typography component="div" sx={{ fontWeight: "bold", textAlign: "center" }}>
         <Markdown>{props.data.markdownRemark.frontmatter.description}</Markdown>
       </Typography>
       <ImageGrid images={images} metadata={metadata} />

@@ -26,7 +26,7 @@ const TextCard: React.FC<{
   content: string;
 }> = (props) => (
   <Box>
-    <Typography fontWeight="bold" textTransform="uppercase">
+    <Typography sx={{ fontWeight: "bold", textTransform: "uppercase" }}>
       {props.title}
     </Typography>
     <Markdown>{props.content}</Markdown>
@@ -55,20 +55,20 @@ const AboutPage: React.FC<PageProps<AboutData>> = (props) => {
   return (
     <Layout>
       <GatsbyImage alt="about" image={heroImage!} />
-      <Grid container mt={4} spacing={2}>
-        <Grid xs={12}>
+      <Grid container sx={{ mt: 4 }} spacing={2}>
+        <Grid size={{ xs: 12 }}>
           <TextCard
             title="Artist Biography"
             content={props.data.markdownRemark.frontmatter.biography}
           />
         </Grid>
-        <Grid xs={12}>
+        <Grid size={{ xs: 12 }}>
           <TextCard
             title="Education"
             content={props.data.markdownRemark.frontmatter.education}
           />
         </Grid>
-        <Grid xs={12}>
+        <Grid size={{ xs: 12 }}>
           <TextCard
             title="Distinctions"
             content={props.data.markdownRemark.frontmatter.awards}

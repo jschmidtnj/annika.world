@@ -1,3 +1,4 @@
+// @ts-ignore
 import { config as dotenv } from "dotenv";
 import type { GatsbyConfig } from "gatsby";
 

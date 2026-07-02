@@ -6,7 +6,7 @@ import Layout from "../components/Layout";
 
 const NotFoundPage: React.FC<PageProps> = () => (
   <Layout>
-    <Typography variant="h3" mt={4} component="h1">
+    <Typography variant="h3" sx={{ mt: 4 }} component="h1">
       Page not found
     </Typography>
     <Typography>

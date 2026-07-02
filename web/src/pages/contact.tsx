@@ -33,7 +33,7 @@ const ContactPage: React.FC<PageProps<ContactData>> = (props) => {
   const isNotSmall = useMediaQuery(theme.breakpoints.up("sm"));
   return (
     <Layout>
-      <Stack direction="row" justifyContent={{ xs: "center", sm: "space-between" }} spacing={2}>
+      <Stack direction="row" spacing={2} sx={{ justifyContent: { xs: "center", sm: "space-between" } }}>
         {!isNotSmall ? null : (
           <GatsbyImage
             style={{
@@ -46,14 +46,16 @@ const ContactPage: React.FC<PageProps<ContactData>> = (props) => {
             loading="eager"
           />
         )}
-        <Stack textAlign="center" mt={20} spacing={20} justifyContent="center">
+        <Stack spacing={20} sx={{ textAlign: "center", mt: 20, justifyContent: "center" }}>
           <Box>
             <Typography
               variant="h5"
               component="h2"
-              textTransform="capitalize"
-              fontWeight="bold"
-              mb={3}
+              sx={{
+                textTransform: "capitalize",
+                fontWeight: "bold",
+                mb: 3,
+              }}
             >
               Studio
             </Typography>
@@ -68,13 +70,15 @@ const ContactPage: React.FC<PageProps<ContactData>> = (props) => {
             <Typography
               variant="h5"
               component="h2"
-              textTransform="capitalize"
-              fontWeight="bold"
-              mb={2}
+              sx={{
+                textTransform: "capitalize",
+                fontWeight: "bold",
+                mb: 2,
+              }}
             >
               Social
             </Typography>
-            <Stack direction="row" spacing={1} justifyContent="center">
+            <Stack direction="row" spacing={1} sx={{ justifyContent: "center" }}>
               <Link target="_blank" href={props.data.site.siteMetadata.instagram}>
                 <InstagramIcon />
               </Link>
