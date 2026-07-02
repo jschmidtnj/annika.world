@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "dev": "gatsby develop --host=127.0.0.1",
-    "start": "yarn dev",
+    "start": "pnpm dev",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
@@ -50,5 +50,18 @@
     "@types/react-dom": "^19.2.3",
     "@types/showdown": "^2.0.6",
     "typescript": "^6.0.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "core-js-pure",
+      "core-js",
+      "es5-ext",
+      "gatsby-cli",
+      "gatsby",
+      "lmdb",
+      "msgpackr-extract",
+      "sharp"
+    ]
   }
 }
