@@ -56,6 +56,42 @@ const pages: PageData[] = [
   },
 ];
 
+export interface SubPageData {
+  title: string;
+  path: string;
+  disabled?: boolean;
+}
+
+export const artPages: SubPageData[] = [
+  {
+    title: "image",
+    path: "/image",
+  },
+  {
+    title: "material",
+    path: "/material",
+  },
+  {
+    title: "experiments",
+    path: "/experiments",
+    disabled: true,
+  },
+  {
+    title: "ecosystems",
+    path: "/ecosystems",
+  },
+  {
+    title: "worlds",
+    path: "/worlds",
+    disabled: true,
+  },
+  {
+    title: "portfolio",
+    path: "/portfolio",
+  },
+];
+
+
 const HeaderLinks: React.FC<
   StackProps & {
     linkProps?: LinkProps;

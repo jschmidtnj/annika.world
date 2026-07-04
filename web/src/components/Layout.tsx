@@ -3,16 +3,38 @@ import { Box, Container } from "@mui/material";
 import Copyright from "./Copyright";
 import Header from "./Header";
 
-const Layout: React.FC<{
+interface LayoutProps {
   children: React.ReactNode;
-}> = (props) => (
-  <Container maxWidth="lg">
-    <Box sx={{ minHeight: "100vh" }}>
-      <Header sx={{ mb: 3 }} />
-      {props.children}
-    </Box>
-    <Copyright sx={{ my: 4 }} />
-  </Container>
-);
+  fullWidth?: boolean;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children, fullWidth = false }) => {
+  if (fullWidth) {
+    return (
+      <Box sx={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+        <Container maxWidth="lg">
+          <Header sx={{ mb: 3 }} />
+        </Container>
+        <Box sx={{ flexGrow: 1, width: "100%" }}>
+          {children}
+        </Box>
+        <Container maxWidth="lg">
+          <Copyright sx={{ my: 4 }} />
+        </Container>
+      </Box>
+    );
+  }
+
+  return (
+    <Container maxWidth="lg">
+      <Box sx={{ minHeight: "100vh" }}>
+        <Header sx={{ mb: 3 }} />
+        {children}
+      </Box>
+      <Copyright sx={{ my: 4 }} />
+    </Container>
+  );
+};
+
 
 export default Layout;
