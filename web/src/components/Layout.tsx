@@ -11,11 +11,11 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children, fullWidth = false }) => {
   if (fullWidth) {
     return (
-      <Box sx={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+      <Box sx={{ display: "flex", flexDirection: "column" }}>
         <Container maxWidth="lg">
           <Header sx={{ mb: 3 }} />
         </Container>
-        <Box sx={{ flexGrow: 1, width: "100%", display: "flex", flexDirection: "column" }}>
+        <Box sx={{ minHeight: "100vh", flexGrow: 1, width: "100%", display: "flex", flexDirection: "column" }}>
           {children}
         </Box>
         <Container maxWidth="lg">
