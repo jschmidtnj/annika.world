@@ -20,7 +20,9 @@ const ArtNewPage: React.FC<PageProps<ArtNewData>> = (props) => {
         sx={{
           position: "relative",
           width: "100%",
-          height: { xs: "500px", sm: "600px", md: "700px" },
+          flexGrow: 1,
+          display: "flex",
+          flexDirection: "column",
           overflow: "hidden",
         }}
       >
@@ -47,7 +49,8 @@ const ArtNewPage: React.FC<PageProps<ArtNewData>> = (props) => {
             spacing={1.5}
             sx={{
               height: "100%",
-              justifyContent: "center",
+              justifyContent: "flex-start",
+              pt: { xs: 12, sm: 18, md: 22 },
               pl: { xs: 2, sm: 4, md: 6 },
             }}
           >
@@ -73,7 +76,7 @@ const ArtNewPage: React.FC<PageProps<ArtNewData>> = (props) => {
                       fontWeight: 900,
                       textTransform: "lowercase",
                       color: "#ffffff",
-                      letterSpacing: "-5px",
+                      letterSpacing: "-0.2rem",
                       WebkitTextStroke: "1px #000000",
                       fontSize: { xs: "2.2rem", sm: "3.2rem", md: "4.5rem" },
                       lineHeight: 1.05,

@@ -95,6 +95,7 @@ const HomePage: React.FC<PageProps<HomeData>> = (props) => {
               sm: 600,
               md: 800,
             },
+            minWidth: 300,
             textAlign: "center",
           }}
         >

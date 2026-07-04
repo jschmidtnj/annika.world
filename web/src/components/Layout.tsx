@@ -15,7 +15,7 @@ const Layout: React.FC<LayoutProps> = ({ children, fullWidth = false }) => {
         <Container maxWidth="lg">
           <Header sx={{ mb: 3 }} />
         </Container>
-        <Box sx={{ flexGrow: 1, width: "100%" }}>
+        <Box sx={{ flexGrow: 1, width: "100%", display: "flex", flexDirection: "column" }}>
           {children}
         </Box>
         <Container maxWidth="lg">
