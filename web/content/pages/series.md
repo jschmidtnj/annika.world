@@ -1,5 +1,25 @@
 ---
 series:
+  - title: Free Roaming Albania
+    date: 2025-02-15
+    description: A collection of photographs capturing the serene and dramatic
+      landscapes of Valbona valley.
+    caption: What is this caption again
+    seriesType: default
+    width: 5
+    images:
+      - image: ../assets/img_2444.jpg
+        isThumbnail: true
+        width: 5
+      - image: ../assets/feb_2025_img15.jpg
+        isThumbnail: false
+        width: 5
+      - image: ../assets/feb_2025_img16.jpg
+        isThumbnail: false
+        width: 5
+      - image: ../assets/feb_2025_img5.jpg
+        isThumbnail: false
+        width: 5
   - title: China
     date: 2023-01-01
     description: China, 2026-.
@@ -67,7 +87,12 @@ series:
         width: 5
   - title: "2025"
     date: 2025-01-01
-    description: A collection of works completed in 2025.
+    description: |-
+      2024-ongoing
+
+      Albania
+
+      Horses, cows, and dogs free roaming Valbona Valley in the Albanian Alps.
     caption: Year Series 2025
     seriesType: year
     width: 5
@@ -76,26 +101,6 @@ series:
         isThumbnail: true
         width: 5
       - image: ../assets/feb_2025_img15.jpg
-        isThumbnail: false
-        width: 5
-  - title: Valbona Journey
-    date: 2025-02-15
-    description: A collection of photographs capturing the serene and dramatic
-      landscapes of Valbona valley.
-    caption: Landscape series in the Albanian Alps
-    seriesType: default
-    width: 5
-    images:
-      - image: ../assets/img_2444.jpg
-        isThumbnail: true
-        width: 5
-      - image: ../assets/feb_2025_img15.jpg
-        isThumbnail: false
-        width: 5
-      - image: ../assets/feb_2025_img16.jpg
-        isThumbnail: false
-        width: 5
-      - image: ../assets/feb_2025_img5.jpg
         isThumbnail: false
         width: 5
   - title: Valbona River System
