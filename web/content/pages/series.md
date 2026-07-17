@@ -1,9 +1,8 @@
 ---
 series:
-  - title: Free Roaming Albania
+  - title: Free Roam
     date: 2025-02-15
-    description: A collection of photographs capturing the serene and dramatic
-      landscapes of Valbona valley.
+    description: Horses, cows, dogs, and cats free roaming in the Balkans.
     caption: What is this caption again
     seriesType: default
     width: 5
@@ -20,23 +19,13 @@ series:
       - image: ../assets/feb_2025_img5.jpg
         isThumbnail: false
         width: 5
-  - title: China
-    date: 2023-01-01
-    description: China, 2026-.
-    caption: i dont understand where this caption at
-    seriesType: year
-    width: 5
-    images:
-      - image: ../assets/burntbrick_2020.jpg
-        isThumbnail: true
-        width: 5
-      - image: ../assets/feb_2025_img3.jpg
-        isThumbnail: false
-        width: 5
-  - title: early works
+  - title: Valbona Valley
     date: 2023-03-10
-    description: Early experimental photography and collage.
-    caption: Archival pigment prints
+    description: |-
+      Valbona Valley, Albania
+
+      2024-ongoing.
+    caption: "Archival pigment prints What "
     seriesType: default
     width: 5
     images:
@@ -46,9 +35,17 @@ series:
       - image: ../assets/feb_2025_img3.jpg
         isThumbnail: false
         width: 5
-  - title: "2024"
+  - title: Alantejo
     date: 2024-01-01
-    description: A collection of works completed in 2024.
+    description: >-
+      2024-2025
+
+
+      Alantejo, Portugal.
+
+
+
+      iPhone photography and digital abstractions from that time I ran a sheep and olive farm.
     caption: Year Series 2024
     seriesType: year
     width: 5
@@ -59,9 +56,14 @@ series:
       - image: ../assets/feb_2025_img1.jpg
         isThumbnail: false
         width: 5
-  - title: photo series
+  - title: Larchlandia
     date: 2024-05-12
-    description: Project description
+    description: |-
+      2025. 
+
+      North Cascades, Washington, USA. 
+
+      Larch madness
     caption: Commentary about image/process
     seriesType: default
     width: 5
@@ -72,9 +74,28 @@ series:
       - image: ../assets/feb_2025_img1.jpg
         isThumbnail: false
         width: 5
-  - title: perverse ecologies
+  - title: China
+    date: 2023-01-01
+    description: |-
+      2026-ongoing. 
+
+      Chengdu, Zhangjiajie, and Chongqing, China.
+    caption: i dont understand where this caption at
+    seriesType: year
+    width: 5
+    images:
+      - image: ../assets/burntbrick_2020.jpg
+        isThumbnail: true
+        width: 5
+      - image: ../assets/feb_2025_img3.jpg
+        isThumbnail: false
+        width: 5
+  - title: Worldwide Death Rituals
     date: 2024-09-20
-    description: An exploration of environmental decay and industrial waste.
+    description: |-
+      2026-ongoing. 
+
+      Vietnam, Germany, USA.
     caption: Mixed media on paper and photographic prints
     seriesType: default
     width: 5
