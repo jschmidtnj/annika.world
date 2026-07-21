@@ -8,58 +8,58 @@ import ImageGrid, { ImageMetadata } from "../components/ImageGrid";
 import Lightbox from "../components/Lightbox";
 import { getFontFamily } from "../utils";
 
-interface SeriesImage {
+interface YearImage {
   image: ImageDataLike;
   column: number;
 }
 
-interface Series {
-  title: string;
+interface Year {
+  year: number;
   description: string;
-  images: SeriesImage[];
+  images: YearImage[];
 }
 
 interface SeriesTemplateData {
   markdownRemark: {
     frontmatter: {
-      series: Series[];
+      years: Year[];
     };
   };
 }
 
 interface PageContext {
-  seriesTitle: string;
+  year: number;
 }
 
-const SeriesTemplate: React.FC<PageProps<SeriesTemplateData, PageContext>> = (props) => {
-  const { seriesTitle } = props.pageContext;
-  const seriesList = props.data.markdownRemark?.frontmatter?.series || [];
-  const series = seriesList.find((s) => s.title === seriesTitle);
+const YearTemplate: React.FC<PageProps<SeriesTemplateData, PageContext>> = (props) => {
+  const { year } = props.pageContext;
+  const yearList = props.data.markdownRemark?.frontmatter?.years || [];
+  const yearData = yearList.find((el) => el.year === year)!;
 
   const [lightboxIndex, setLightboxIndex] = React.useState<number | null>(null);
 
-  if (!series) {
+  if (!year) {
     return (
       <Layout>
         <Typography variant="h5" sx={{ mt: 4, textAlign: "center" }}>
-          Series not found
+          Year not found
         </Typography>
       </Layout>
     );
   }
 
   const images = React.useMemo(() => {
-    return series.images.map((img) => getImage(img.image)!);
-  }, [series.images]);
+    return yearData.images.map((img) => getImage(img.image)!);
+  }, [yearData.images]);
 
   const metadata: ImageMetadata[] = React.useMemo(() => {
-    return series.images.map((img) => ({
+    return yearData.images.map((img) => ({
       caption: "",
       showCaption: false,
       year: 0,
       column: img.column,
     }));
-  }, [series.images]);
+  }, [yearData.images]);
 
   const handleImageClick = (index: number) => {
     setLightboxIndex(index);
@@ -94,10 +94,10 @@ const SeriesTemplate: React.FC<PageProps<SeriesTemplateData, PageContext>> = (pr
             fontFamily: getFontFamily("Bebas Neue"),
           }}
         >
-          {series.title}
+          {yearData.year}
         </Typography>
         <Typography component="div" sx={{ maxWidth: "800px", mx: "auto" }}>
-          <Markdown>{series.description}</Markdown>
+          <Markdown>{yearData.description}</Markdown>
         </Typography>
       </Box>
 
@@ -119,14 +119,14 @@ const SeriesTemplate: React.FC<PageProps<SeriesTemplateData, PageContext>> = (pr
   );
 };
 
-export default SeriesTemplate;
+export default YearTemplate;
 
 export const pageQuery = graphql`
   query {
-    markdownRemark(fileAbsolutePath: { regex: "/.*/content/pages/series.md$/" }) {
+    markdownRemark(fileAbsolutePath: { regex: "/.*/content/pages/portfolio.md$/" }) {
       frontmatter {
-        series {
-          title
+        years {
+          year
           description
           images {
             image {

@@ -1,24 +1,18 @@
 import * as React from "react";
 import { graphql, PageProps, navigate } from "gatsby";
-import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image";
+import { getImage, ImageDataLike, IGatsbyImageData } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
-import Grid from "@mui/material/Grid";
-import { Box, Typography } from "@mui/material";
-import { getFontFamily } from "../utils";
+import ImageGrid, { ImageMetadata } from "../components/ImageGrid";
 
 interface SeriesImage {
   image: ImageDataLike;
   isThumbnail: boolean;
-  width: number;
 }
 
 interface Series {
   title: string;
-  date?: string;
-  description: string;
   caption?: string;
-  seriesType?: string;
-  width: number;
+  column: number;
   images: SeriesImage[];
 }
 
@@ -30,85 +24,57 @@ interface SeriesPageData {
   };
 }
 
-const SeriesThumbnail: React.FC<{
-  series: Series;
-  slug: string;
-}> = ({ series, slug }) => {
-  const [active, setActive] = React.useState(false);
+const SeriesPage: React.FC<PageProps<SeriesPageData>> = (props) => {
+  const seriesList = props.data.markdownRemark?.frontmatter?.series;
 
-  const thumbnailObj = series.images.find(img => img.isThumbnail) || series.images[0];
-  const gatsbyImg = thumbnailObj ? getImage(thumbnailObj.image) : null;
+  const { images, metadata, slugs } = React.useMemo(() => {
+    const imgs: IGatsbyImageData[] = [];
+    const meta: ImageMetadata[] = [];
+    const slugList: string[] = [];
 
-  const handleClick = () => {
-    navigate(`/series/${slug}`);
+    seriesList.forEach((s) => {
+      const thumbnailObj =
+        s.images.find((img) => img.isThumbnail) || s.images[0];
+      if (!thumbnailObj) {
+        return;
+      }
+
+      const gatsbyImg = getImage(thumbnailObj.image);
+      if (!gatsbyImg) {
+        return;
+      }
+
+      imgs.push(gatsbyImg);
+      meta.push({
+        caption: s.title,
+        showCaption: true,
+        year: 0,
+        column: s.column,
+      });
+      const slug = s.title
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/(^-|-$)+/g, "");
+      slugList.push(slug);
+    });
+
+    return { images: imgs, metadata: meta, slugs: slugList };
+  }, [seriesList]);
+
+  const handleImageClick = (index: number) => {
+    const slug = slugs[index];
+    if (slug) {
+      navigate(`/series/${slug}`);
+    }
   };
 
   return (
-    <Grid
-      size={{
-        xs: 12,
-        sm: 12,
-        md: series.width || 3,
-      }}
-      sx={{
-        cursor: "pointer",
-      }}
-      onMouseEnter={() => setActive(true)}
-      onMouseLeave={() => setActive(false)}
-      onClick={handleClick}
-    >
-      {!active ? null : (
-        <Box sx={{ position: "relative", top: "40%", zIndex: 1, height: 0 }}>
-          <Typography
-            color="white"
-            variant="h5"
-            sx={{
-              textTransform: "uppercase",
-              fontWeight: "bold",
-              textAlign: "center",
-              fontFamily: getFontFamily("Bebas Neue"),
-            }}
-          >
-            {series.title}
-          </Typography>
-        </Box>
-      )}
-      {gatsbyImg && (
-        <GatsbyImage
-          style={{
-            height: "100%",
-            opacity: !active ? undefined : 0.3,
-            transition: "0.25s ease"
-          }}
-          alt={series.title}
-          image={gatsbyImg}
-        />
-      )}
-    </Grid>
-  );
-};
-
-const SeriesPage: React.FC<PageProps<SeriesPageData>> = (props) => {
-  const seriesList = (props.data.markdownRemark?.frontmatter?.series || [])
-    .filter((s) => !s.seriesType || s.seriesType === "default");
-
-  return (
     <Layout>
-      <Grid container sx={{ mt: 4, justifyContent: "center" }} rowSpacing={1.5} columns={10} columnSpacing={1}>
-        {seriesList.map((seriesItem, idx) => {
-          const slug = seriesItem.title
-            .toLowerCase()
-            .replace(/[^a-z0-9]+/g, "-")
-            .replace(/(^-|-$)+/g, "");
-          return (
-            <SeriesThumbnail
-              key={`series-${idx}`}
-              series={seriesItem}
-              slug={slug}
-            />
-          );
-        })}
-      </Grid>
+      <ImageGrid
+        images={images}
+        metadata={metadata}
+        onImageClick={handleImageClick}
+      />
     </Layout>
   );
 };
@@ -121,11 +87,8 @@ export const pageQuery = graphql`
       frontmatter {
         series {
           title
-          date
-          description
           caption
-          seriesType
-          width
+          column
           images {
             image {
               childImageSharp {
@@ -137,7 +100,6 @@ export const pageQuery = graphql`
               }
             }
             isThumbnail
-            width
           }
         }
       }

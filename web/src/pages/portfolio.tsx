@@ -7,7 +7,7 @@ import { Box, Typography } from "@mui/material";
 import { getFontFamily } from "../utils";
 import Link from "../components/Link";
 
-interface SeriesImage {
+interface GroupImage {
   image: ImageDataLike;
   isThumbnail: boolean;
   width: number;
@@ -15,87 +15,56 @@ interface SeriesImage {
 
 interface Series {
   title: string;
-  date?: string;
   description: string;
   caption?: string;
-  seriesType?: string;
-  width: number;
-  images: SeriesImage[];
+  inPortfolio: boolean;
+  images: GroupImage[];
+}
+
+interface Project {
+  title: string;
+  description: string;
+  caption?: string;
+  images: GroupImage[];
+}
+
+interface Year {
+  year: number;
 }
 
 interface PortfolioPageData {
-  markdownRemark: {
+  series: {
     frontmatter: {
       series: Series[];
     };
   };
+  portfolio: {
+    frontmatter: {
+      years: Year[];
+      projects: Project[];
+    };
+  };
 }
 
-const getYearFromDate = (dateStr?: string): string => {
-  if (!dateStr) return "Unknown";
-  const parts = dateStr.split("-");
-  if (parts.length > 0 && parts[0].length === 4) {
-    return parts[0];
-  }
-  const dateObj = new Date(dateStr);
-  if (!isNaN(dateObj.getTime())) {
-    return dateObj.getFullYear().toString();
-  }
-  return "Unknown";
-};
+interface Group {
+  title: string;
+  description: string;
+  caption?: string;
+  images: GroupImage[];
+  isSeries?: boolean;
+}
 
 const PortfolioPage: React.FC<PageProps<PortfolioPageData>> = (props) => {
-  const seriesList = props.data.markdownRemark?.frontmatter?.series || [];
+  const years = React.useMemo(() => props.data.portfolio.frontmatter.years.map(curr => curr.year).sort(), []);
 
-  // Get all unique years and sort them ascending (excluding year series)
-  const years = React.useMemo(() => {
-    const allYears = seriesList
-      .filter((s) => !s.seriesType || s.seriesType === "default")
-      .map((s) => getYearFromDate(s.date))
-      .filter((y) => y !== "Unknown");
-    const uniqueYears = Array.from(new Set(allYears));
-    return uniqueYears.sort((a, b) => parseInt(a, 10) - parseInt(b, 10));
-  }, [seriesList]);
-
-  // Default to the most recent year
-  const defaultYear = React.useMemo(() => {
-    if (years.length === 0) return "";
-    return years[years.length - 1];
-  }, [years]);
-
-  const [selectedYear, setSelectedYear] = React.useState<string>("");
-
-  React.useEffect(() => {
-    if (typeof window !== "undefined") {
-      const savedYear = sessionStorage.getItem("portfolioSelectedYear");
-      if (savedYear && years.includes(savedYear)) {
-        setSelectedYear(savedYear);
-        return;
-      }
-    }
-    if (defaultYear) {
-      setSelectedYear(defaultYear);
-    }
-  }, [defaultYear, years]);
-
-  const handleYearClick = (year: string) => {
-    if (selectedYear === year) {
-      navigate(`/series/${year}`);
-      return;
-    }
-    setSelectedYear(year);
-    if (typeof window !== "undefined") {
-      sessionStorage.setItem("portfolioSelectedYear", year);
-    }
-  };
-
-  // Filter series by the selected year, excluding the year series itself
-  const filteredSeries = React.useMemo(() => {
-    if (!selectedYear) return [];
-    return seriesList.filter(
-      (s) => getYearFromDate(s.date) === selectedYear && (!s.seriesType || s.seriesType === "default")
-    );
-  }, [seriesList, selectedYear]);
+  const groups = React.useMemo(() => {
+    const seriesGroups: Group[] = props.data.series.frontmatter.series.filter(el => el.inPortfolio).map(el => ({
+      ...el,
+      isSeries: true,
+    }));
+    const projectGroups: Group[] = props.data.portfolio.frontmatter.projects;
+    return [...seriesGroups, ...projectGroups];
+  }, []);
 
   return (
     <Layout>
@@ -110,53 +79,47 @@ const PortfolioPage: React.FC<PageProps<PortfolioPageData>> = (props) => {
             mt: 4,
           }}
         >
-          {years.map((year) => {
-            const isSelected = selectedYear === year;
-            return (
-              <Box
-                key={year}
-                onClick={() => handleYearClick(year)}
-                sx={{
-                  cursor: "pointer",
-                  fontSize: { xs: "2rem", sm: "3rem", md: "4rem" },
-                  fontWeight: isSelected ? "bold" : "normal",
-                  fontFamily: getFontFamily("Secular One"),
-                  color: isSelected ? "white" : "text.secondary",
-                  borderBottom: isSelected
-                    ? "4px solid #5FE8FF"
-                    : "4px solid transparent",
-                  pb: 0.5,
-                  transition: "all 0.2s ease-in-out",
-                  "&:hover": {
-                    color: "white",
-                  },
-                }}
-              >
-                {year}
-              </Box>
-            );
-          })}
+          {years.map((year) => (
+            <Box
+              key={year}
+              onClick={() => navigate(`/portfolio/${year}`)}
+              sx={{
+                cursor: "pointer",
+                fontSize: { xs: "2rem", sm: "3rem", md: "4rem" },
+                fontWeight: "normal",
+                fontFamily: getFontFamily("Secular One"),
+                color: "text.secondary",
+                pb: 0.5,
+                transition: "all 0.2s ease-in-out",
+                "&:hover": {
+                  color: "white",
+                },
+              }}
+            >
+              {year}
+            </Box>
+          ))}
         </Box>
       )}
 
-      {/* Series Vertical List */}
+      {/* Group Vertical List */}
       <Box sx={{ maxWidth: "1000px", mx: "auto", px: 2 }}>
-        {filteredSeries.map((seriesItem, idx) => {
-          const slug = seriesItem.title
+        {groups.map((group, idx) => {
+          const slug = group.title
             .toLowerCase()
             .replace(/[^a-z0-9]+/g, "-")
             .replace(/(^-|-$)+/g, "");
 
           const thumbnailObj =
-            seriesItem.images.find((img) => img.isThumbnail) ||
-            seriesItem.images[0];
+            group.images.find((img) => img.isThumbnail) ||
+            group.images[0];
           const gatsbyImg = thumbnailObj ? getImage(thumbnailObj.image) : null;
 
           return (
             <Grid
               container
               spacing={{ xs: 3, md: 6 }}
-              key={`series-item-${idx}`}
+              key={`group-item-${idx}`}
               sx={{
                 mb: { xs: 6, md: 8 },
                 alignItems: "center",
@@ -165,7 +128,7 @@ const PortfolioPage: React.FC<PageProps<PortfolioPageData>> = (props) => {
               {/* Left Column: Thumbnail */}
               <Grid size={{ xs: 12, md: 5 }}>
                 <Link
-                  to={`/series/${slug}`}
+                  to={group.isSeries ? `/series/${slug}` : `/portfolio/${slug}`}
                   sx={{
                     display: "block",
                     textDecoration: "none",
@@ -180,7 +143,7 @@ const PortfolioPage: React.FC<PageProps<PortfolioPageData>> = (props) => {
                   {gatsbyImg && (
                     <GatsbyImage
                       image={gatsbyImg}
-                      alt={seriesItem.title}
+                      alt={group.title}
                       style={{
                         width: "100%",
                         height: "auto",
@@ -216,7 +179,7 @@ const PortfolioPage: React.FC<PageProps<PortfolioPageData>> = (props) => {
                     }}
                   >
                     <Link
-                      to={`/series/${slug}`}
+                      to={group.isSeries ? `/series/${slug}` : `/portfolio/${slug}`}
                       sx={{
                         textDecoration: "none",
                         color: "white",
@@ -226,10 +189,10 @@ const PortfolioPage: React.FC<PageProps<PortfolioPageData>> = (props) => {
                         transition: "color 0.2s ease",
                       }}
                     >
-                      {seriesItem.title}
+                      {group.title}
                     </Link>
                   </Typography>
-                  {seriesItem.caption && (
+                  {group.caption && (
                     <Typography
                       variant="body1"
                       sx={{
@@ -239,7 +202,7 @@ const PortfolioPage: React.FC<PageProps<PortfolioPageData>> = (props) => {
                         fontWeight: 400,
                       }}
                     >
-                      {seriesItem.caption}
+                      {group.caption}
                     </Typography>
                   )}
                 </Box>
@@ -258,14 +221,12 @@ export const Head: HeadFC = () => <title>Portfolio | Annika World</title>;
 
 export const pageQuery = graphql`
   query {
-    markdownRemark(fileAbsolutePath: { regex: "/.*/content/pages/series.md$/" }) {
+    series: markdownRemark(fileAbsolutePath: { regex: "/.*/content/pages/series.md$/" }) {
       frontmatter {
         series {
           title
-          date
           caption
-          seriesType
-          width
+          inPortfolio
           images {
             image {
               childImageSharp {
@@ -277,7 +238,31 @@ export const pageQuery = graphql`
               }
             }
             isThumbnail
-            width
+            column
+          }
+        }
+      }
+    }
+    portfolio: markdownRemark(fileAbsolutePath: { regex: "/.*/content/pages/portfolio.md$/" }) {
+      frontmatter {
+        years {
+          year
+        }
+        projects {
+          title
+          caption
+          images {
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                  layout: FULL_WIDTH
+                )
+              }
+            }
+            isThumbnail
+            column
           }
         }
       }

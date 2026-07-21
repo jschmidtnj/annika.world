@@ -8,58 +8,58 @@ import ImageGrid, { ImageMetadata } from "../components/ImageGrid";
 import Lightbox from "../components/Lightbox";
 import { getFontFamily } from "../utils";
 
-interface SeriesImage {
+interface EcosystemImage {
   image: ImageDataLike;
   column: number;
 }
 
-interface Series {
+interface Ecosystem {
   title: string;
   description: string;
-  images: SeriesImage[];
+  images: EcosystemImage[];
 }
 
-interface SeriesTemplateData {
+interface EcosystemTemplateData {
   markdownRemark: {
     frontmatter: {
-      series: Series[];
+      ecosystems: Ecosystem[];
     };
   };
 }
 
 interface PageContext {
-  seriesTitle: string;
+  ecosystemTitle: string;
 }
 
-const SeriesTemplate: React.FC<PageProps<SeriesTemplateData, PageContext>> = (props) => {
-  const { seriesTitle } = props.pageContext;
-  const seriesList = props.data.markdownRemark?.frontmatter?.series || [];
-  const series = seriesList.find((s) => s.title === seriesTitle);
+const EcosystemTemplate: React.FC<PageProps<EcosystemTemplateData, PageContext>> = (props) => {
+  const { ecosystemTitle } = props.pageContext;
+  const ecosystemList = props.data.markdownRemark?.frontmatter?.ecosystems || [];
+  const ecosystem = ecosystemList.find((el) => el.title === ecosystemTitle);
 
   const [lightboxIndex, setLightboxIndex] = React.useState<number | null>(null);
 
-  if (!series) {
+  if (!ecosystem) {
     return (
       <Layout>
         <Typography variant="h5" sx={{ mt: 4, textAlign: "center" }}>
-          Series not found
+          Ecosystem not found
         </Typography>
       </Layout>
     );
   }
 
   const images = React.useMemo(() => {
-    return series.images.map((img) => getImage(img.image)!);
-  }, [series.images]);
+    return ecosystem.images.map((img) => getImage(img.image)!);
+  }, [ecosystem.images]);
 
   const metadata: ImageMetadata[] = React.useMemo(() => {
-    return series.images.map((img) => ({
+    return ecosystem.images.map((img) => ({
       caption: "",
       showCaption: false,
       year: 0,
       column: img.column,
     }));
-  }, [series.images]);
+  }, [ecosystem.images]);
 
   const handleImageClick = (index: number) => {
     setLightboxIndex(index);
@@ -94,10 +94,10 @@ const SeriesTemplate: React.FC<PageProps<SeriesTemplateData, PageContext>> = (pr
             fontFamily: getFontFamily("Bebas Neue"),
           }}
         >
-          {series.title}
+          {ecosystem.title}
         </Typography>
         <Typography component="div" sx={{ maxWidth: "800px", mx: "auto" }}>
-          <Markdown>{series.description}</Markdown>
+          <Markdown>{ecosystem.description}</Markdown>
         </Typography>
       </Box>
 
@@ -119,13 +119,13 @@ const SeriesTemplate: React.FC<PageProps<SeriesTemplateData, PageContext>> = (pr
   );
 };
 
-export default SeriesTemplate;
+export default EcosystemTemplate;
 
 export const pageQuery = graphql`
   query {
-    markdownRemark(fileAbsolutePath: { regex: "/.*/content/pages/series.md$/" }) {
+    markdownRemark(fileAbsolutePath: { regex: "/.*/content/pages/ecosystems.md$/" }) {
       frontmatter {
-        series {
+        ecosystems {
           title
           description
           images {

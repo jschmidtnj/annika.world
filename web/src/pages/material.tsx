@@ -27,7 +27,7 @@ const MaterialPage: React.FC<PageProps<MaterialData>> = (props) => {
       props.data.markdownRemark.frontmatter.images.map((img) => ({
         caption: img.caption,
         showCaption: img.showCaption,
-        width: img.width,
+        column: img.column,
         year: img.year,
       })),
     [props.data.markdownRemark.frontmatter.images]
@@ -57,8 +57,8 @@ export const pageQuery = graphql`
           }
           caption
           showCaption
-          width
           year
+          column
         }
       }
     }

@@ -7,58 +7,52 @@ import { Box, Typography } from "@mui/material";
 import { getFontFamily } from "../utils";
 import Link from "../components/Link";
 
-interface SeriesImage {
+interface EcosystemImage {
   image: ImageDataLike;
   isThumbnail: boolean;
-  width: number;
+  column: number;
 }
 
-interface Series {
+interface Ecosystem {
   title: string;
   date?: string;
   description: string;
   caption?: string;
-  seriesType?: string;
-  width: number;
-  images: SeriesImage[];
+  column: number;
+  images: EcosystemImage[];
 }
 
 interface EcosystemsPageData {
   markdownRemark: {
     frontmatter: {
-      series: Series[];
+      ecosystems: Ecosystem[];
     };
   };
 }
 
 const EcosystemsPage: React.FC<PageProps<EcosystemsPageData>> = (props) => {
-  const seriesList = props.data.markdownRemark?.frontmatter?.series || [];
-
-  // Filter series by the "ecosystem" type
-  const ecosystems = React.useMemo(() => {
-    return seriesList.filter((s) => s.seriesType === "ecosystem");
-  }, [seriesList]);
+  const ecosystems = props.data.markdownRemark?.frontmatter?.ecosystems || [];
 
   return (
     <Layout>
-      {/* Series Vertical List */}
+      {/* Ecosystems Vertical List */}
       <Box sx={{ maxWidth: "1000px", mx: "auto", px: 2, mt: 6 }}>
-        {ecosystems.map((seriesItem, idx) => {
-          const slug = seriesItem.title
+        {ecosystems.map((ecosystemItem, idx) => {
+          const slug = ecosystemItem.title
             .toLowerCase()
             .replace(/[^a-z0-9]+/g, "-")
             .replace(/(^-|-$)+/g, "");
 
           const thumbnailObj =
-            seriesItem.images.find((img) => img.isThumbnail) ||
-            seriesItem.images[0];
+            ecosystemItem.images.find((img) => img.isThumbnail) ||
+            ecosystemItem.images[0];
           const gatsbyImg = thumbnailObj ? getImage(thumbnailObj.image) : null;
 
           return (
             <Grid
               container
               spacing={{ xs: 3, md: 6 }}
-              key={`series-item-${idx}`}
+              key={`ecosystem-item-${idx}`}
               sx={{
                 mb: { xs: 6, md: 8 },
                 alignItems: "center",
@@ -67,7 +61,7 @@ const EcosystemsPage: React.FC<PageProps<EcosystemsPageData>> = (props) => {
               {/* Left Column: Thumbnail */}
               <Grid size={{ xs: 12, md: 5 }}>
                 <Link
-                  to={`/series/${slug}`}
+                  to={`/ecosystem/${slug}`}
                   sx={{
                     display: "block",
                     textDecoration: "none",
@@ -82,7 +76,7 @@ const EcosystemsPage: React.FC<PageProps<EcosystemsPageData>> = (props) => {
                   {gatsbyImg && (
                     <GatsbyImage
                       image={gatsbyImg}
-                      alt={seriesItem.title}
+                      alt={ecosystemItem.title}
                       style={{
                         width: "100%",
                         height: "auto",
@@ -128,10 +122,10 @@ const EcosystemsPage: React.FC<PageProps<EcosystemsPageData>> = (props) => {
                         transition: "color 0.2s ease",
                       }}
                     >
-                      {seriesItem.title}
+                      {ecosystemItem.title}
                     </Link>
                   </Typography>
-                  {seriesItem.caption && (
+                  {ecosystemItem.caption && (
                     <Typography
                       variant="body1"
                       sx={{
@@ -141,7 +135,7 @@ const EcosystemsPage: React.FC<PageProps<EcosystemsPageData>> = (props) => {
                         fontWeight: 400,
                       }}
                     >
-                      {seriesItem.caption}
+                      {ecosystemItem.caption}
                     </Typography>
                   )}
                 </Box>
@@ -160,14 +154,12 @@ export const Head: HeadFC = () => <title>Ecosystems | Annika World</title>;
 
 export const pageQuery = graphql`
   query {
-    markdownRemark(fileAbsolutePath: { regex: "/.*/content/pages/series.md$/" }) {
+    markdownRemark(fileAbsolutePath: { regex: "/.*/content/pages/ecosystems.md$/" }) {
       frontmatter {
-        series {
+        ecosystems {
           title
-          date
           caption
-          seriesType
-          width
+          column
           images {
             image {
               childImageSharp {
@@ -179,7 +171,6 @@ export const pageQuery = graphql`
               }
             }
             isThumbnail
-            width
           }
         }
       }

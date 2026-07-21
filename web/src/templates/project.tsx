@@ -8,58 +8,58 @@ import ImageGrid, { ImageMetadata } from "../components/ImageGrid";
 import Lightbox from "../components/Lightbox";
 import { getFontFamily } from "../utils";
 
-interface SeriesImage {
+interface ProjectImage {
   image: ImageDataLike;
   column: number;
 }
 
-interface Series {
+interface Project {
   title: string;
   description: string;
-  images: SeriesImage[];
+  images: ProjectImage[];
 }
 
-interface SeriesTemplateData {
+interface ProjectTemplateData {
   markdownRemark: {
     frontmatter: {
-      series: Series[];
+      projects: Project[];
     };
   };
 }
 
 interface PageContext {
-  seriesTitle: string;
+  projectTitle: string;
 }
 
-const SeriesTemplate: React.FC<PageProps<SeriesTemplateData, PageContext>> = (props) => {
-  const { seriesTitle } = props.pageContext;
-  const seriesList = props.data.markdownRemark?.frontmatter?.series || [];
-  const series = seriesList.find((s) => s.title === seriesTitle);
+const ProjectTemplate: React.FC<PageProps<ProjectTemplateData, PageContext>> = (props) => {
+  const { projectTitle } = props.pageContext;
+  const projectList = props.data.markdownRemark?.frontmatter?.projects || [];
+  const project = projectList.find((el) => el.title === projectTitle);
 
   const [lightboxIndex, setLightboxIndex] = React.useState<number | null>(null);
 
-  if (!series) {
+  if (!project) {
     return (
       <Layout>
         <Typography variant="h5" sx={{ mt: 4, textAlign: "center" }}>
-          Series not found
+          Project not found
         </Typography>
       </Layout>
     );
   }
 
   const images = React.useMemo(() => {
-    return series.images.map((img) => getImage(img.image)!);
-  }, [series.images]);
+    return project.images.map((img) => getImage(img.image)!);
+  }, [project.images]);
 
   const metadata: ImageMetadata[] = React.useMemo(() => {
-    return series.images.map((img) => ({
+    return project.images.map((img) => ({
       caption: "",
       showCaption: false,
       year: 0,
       column: img.column,
     }));
-  }, [series.images]);
+  }, [project.images]);
 
   const handleImageClick = (index: number) => {
     setLightboxIndex(index);
@@ -94,10 +94,10 @@ const SeriesTemplate: React.FC<PageProps<SeriesTemplateData, PageContext>> = (pr
             fontFamily: getFontFamily("Bebas Neue"),
           }}
         >
-          {series.title}
+          {project.title}
         </Typography>
         <Typography component="div" sx={{ maxWidth: "800px", mx: "auto" }}>
-          <Markdown>{series.description}</Markdown>
+          <Markdown>{project.description}</Markdown>
         </Typography>
       </Box>
 
@@ -119,13 +119,13 @@ const SeriesTemplate: React.FC<PageProps<SeriesTemplateData, PageContext>> = (pr
   );
 };
 
-export default SeriesTemplate;
+export default ProjectTemplate;
 
 export const pageQuery = graphql`
   query {
-    markdownRemark(fileAbsolutePath: { regex: "/.*/content/pages/series.md$/" }) {
+    markdownRemark(fileAbsolutePath: { regex: "/.*/content/pages/portfolio.md$/" }) {
       frontmatter {
-        series {
+        projects {
           title
           description
           images {

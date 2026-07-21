@@ -15,7 +15,7 @@ collections:
     media_folder: ../assets
     public_folder: ../assets
     files:
-      - label: "Art Page"
+      - label: "Art Page (Old)"
         name: "art"
         file: "web/content/pages/art.md"
         fields:
@@ -45,6 +45,7 @@ collections:
                 min: 0
                 max: 12
                 default: 3
+
       - label: "Material Page"
         name: "material"
         file: "web/content/pages/material.md"
@@ -68,13 +69,57 @@ collections:
                 widget: number
                 value_type: int
                 default: 2026
-              - name: width
-                label: Width
+              - name: column
+                label: Column
                 widget: number
-                value_type: float
-                min: 0
-                max: 12
-                default: 3
+                value_type: int
+                min: 1
+                max: 10
+                default: 1
+
+      - label: "Ecosystems Page"
+        name: "ecosystems"
+        file: "web/content/pages/ecosystems.md"
+        fields:
+          - name: ecosystems
+            label: Ecosystems
+            widget: list
+            fields:
+              - name: title
+                label: Title
+                widget: string
+              - name: description
+                label: Description
+                widget: markdown
+              - name: caption
+                label: Caption
+                widget: string
+              - name: column
+                label: Column
+                widget: number
+                value_type: int
+                min: 1
+                max: 10
+                default: 1
+              - name: images
+                label: Images
+                widget: list
+                fields:
+                  - name: image
+                    label: Image
+                    widget: image
+                  - name: isThumbnail
+                    label: Is Thumbnail
+                    widget: boolean
+                    default: false
+                  - name: column
+                    label: Column (use this or width)
+                    widget: number
+                    value_type: int
+                    min: 1
+                    max: 10
+                    default: 1
+
       - label: "Experiments Page"
         name: "experiments"
         file: "web/content/pages/experiments.md"
@@ -98,13 +143,14 @@ collections:
                 widget: number
                 value_type: int
                 default: 2026
-              - name: width
-                label: Width
+              - name: column
+                label: Column
                 widget: number
-                value_type: float
-                min: 0
-                max: 12
-                default: 3
+                value_type: int
+                min: 1
+                max: 10
+                default: 1
+
       - label: "Series Page"
         name: "series"
         file: "web/content/pages/series.md"
@@ -116,27 +162,23 @@ collections:
               - name: title
                 label: Title
                 widget: string
-              - name: date
-                label: Date
-                widget: date
               - name: description
                 label: Description
                 widget: markdown
               - name: caption
                 label: Caption
                 widget: string
-              - name: seriesType
-                label: Series Type
-                widget: select
-                options: ["default", "year", "ecosystem"]
-                default: "default"
-              - name: width
-                label: Width
+              - name: inPortfolio
+                label: In Portfolio (yes or no)
+                widget: boolean
+                default: false
+              - name: column
+                label: Column
                 widget: number
-                value_type: float
-                min: 0
-                max: 12
-                default: 3
+                value_type: int
+                min: 1
+                max: 10
+                default: 1
               - name: images
                 label: Images
                 widget: list
@@ -148,13 +190,69 @@ collections:
                     label: Is Thumbnail
                     widget: boolean
                     default: false
-                  - name: width
-                    label: Width
+                  - name: column
+                    label: Column (use this or width)
                     widget: number
-                    value_type: float
-                    min: 0
-                    max: 12
-                    default: 3
+                    value_type: int
+                    min: 1
+                    max: 10
+                    default: 1
+
+      - label: "Portfolio Page"
+        name: "portfolio"
+        file: "web/content/pages/portfolio.md"
+        fields:
+          - name: years
+            label: Years
+            widget: list
+            fields:
+              - name: year
+                label: Year
+                widget: number
+                value_type: int
+                min: 2000
+                max: 3000
+              - name: description
+                label: Description
+                widget: markdown
+              - name: images
+                label: Images
+                widget: list
+                fields:
+                  - name: image
+                    label: Image
+                    widget: image
+                  - name: column
+                    label: Column (use this or width)
+                    widget: number
+                    value_type: int
+                    min: 1
+                    max: 10
+                    default: 1
+          - name: projects
+            label: Projects
+            widget: list
+            fields:
+              - name: title
+                label: Title
+                widget: string
+              - name: description
+                label: Description
+                widget: markdown
+              - name: caption
+                label: Caption
+                widget: string
+              - name: images
+                label: Images
+                widget: list
+                fields:
+                  - name: image
+                    label: Image
+                    widget: image
+                  - name: isThumbnail
+                    label: Is Thumbnail
+                    widget: boolean
+                    default: false
 
       - label: "Tattoo Page"
         name: "tattoo"
@@ -188,7 +286,8 @@ collections:
                 value_type: float
                 min: 0
                 max: 12
-                default: 3
+                default: 0
+
       - label: "About Page"
         name: "about"
         file: "web/content/pages/about.md"
@@ -231,6 +330,7 @@ collections:
                 min: 0
                 max: 12
                 default: 3
+
   - name: uploads
     label: Uploads
     label_singular: Upload
