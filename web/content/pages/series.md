@@ -2,23 +2,34 @@
 series:
   - title: Free Roam
     date: 2025-02-15
-    description: Horses, cows, dogs, and cats free roaming in the Balkans.
-    caption: What is this caption again
+    description: |-
+      2024-ongoing
+
+      Albania, Montenegro
+
+      Horses, cows, dogs, and cats free roaming in the Balkans.
+    caption: ""
     column: 1
     inPortfolio: false
     images:
       - image: ../assets/img_2444.jpg
         isThumbnail: true
         column: 1
-      - image: ../assets/feb_2025_img15.jpg
+      - image: ../assets/img_1905.jpg
         isThumbnail: false
         column: 2
-      - image: ../assets/feb_2025_img16.jpg
+      - image: ../assets/img_2405.jpg
         isThumbnail: false
         column: 1
-      - image: ../assets/feb_2025_img5.jpg
+      - image: ../assets/img_1889.jpg
         isThumbnail: false
+        column: 1
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_2176.jpg
+      - isThumbnail: false
         column: 2
+        image: ../assets/img_2183.jpg
   - title: Valbona Valley
     date: 2023-03-10
     description: |-
