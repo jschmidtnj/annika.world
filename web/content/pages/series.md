@@ -54,17 +54,53 @@ series:
         image: ../assets/img_6783.jpg
   - title: Barendorf, Dusk
     date: 2024-09-20
-    description: ""
-    caption: Mixed media on paper and photographic prints
+    description: |-
+      2026-ongoing
+
+      Barendorf, Niedersachsen, Deutschland
+    caption: ""
     column: 2
     inPortfolio: false
     images:
-      - image: ../assets/barendorferstill.png
-        isThumbnail: true
+      - isThumbnail: true
         column: 1
-      - image: ../assets/feb_2025_img2.jpg
-        isThumbnail: false
+        image: ../assets/img_3693.jpg
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_2225.jpg
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_2237.jpg
+      - isThumbnail: false
         column: 2
+        image: ../assets/img_7506.jpg
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_1043.jpg
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_0915.jpg
+      - isThumbnail: false
+        column: 2
+        image: ../assets/img_3638.jpg
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_1602.jpg
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_4556.jpg
+      - isThumbnail: false
+        column: 2
+        image: ../assets/img_1520.jpg
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_7192.jpg
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_4647.jpg
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_6373.jpg
   - title: Free Roam
     date: 2025-02-15
     description: |-
@@ -74,7 +110,7 @@ series:
 
       Horses, cows, dogs, and cats free roaming in the Balkans.
     caption: ""
-    column: 1
+    column: 3
     inPortfolio: false
     images:
       - image: ../assets/img_2444.jpg
