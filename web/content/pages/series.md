@@ -1,5 +1,70 @@
 ---
 series:
+  - title: Barendorf, Daylight
+    date: 2024-05-12
+    description: |-
+      2026-ongoing
+
+      Barendorf, Niedersachsen, Deutschland
+    caption: ""
+    column: 1
+    inPortfolio: false
+    images:
+      - isThumbnail: true
+        column: 1
+        image: ../assets/img_6158.jpg
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_5730.jpg
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_8762.jpg
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_7517.jpg
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_8951.jpg
+      - isThumbnail: false
+        column: 2
+        image: ../assets/img_2661.jpg
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_7497.jpg
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_8492.jpg
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_2491.jpg
+      - isThumbnail: false
+        column: 2
+        image: ../assets/img_6899.jpg
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_7726.jpg
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_9403.jpg
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_9852.jpg
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_6783.jpg
+  - title: Barendorf, Dusk
+    date: 2024-09-20
+    description: ""
+    caption: Mixed media on paper and photographic prints
+    column: 2
+    inPortfolio: false
+    images:
+      - image: ../assets/barendorferstill.png
+        isThumbnail: true
+        column: 1
+      - image: ../assets/feb_2025_img2.jpg
+        isThumbnail: false
+        column: 2
   - title: Free Roam
     date: 2025-02-15
     description: |-
@@ -36,7 +101,7 @@ series:
       Valbona Valley, Albania
 
       2024-ongoing.
-    caption: "Archival pigment prints What "
+    caption: ""
     column: 2
     inPortfolio: false
     images:
@@ -46,24 +111,6 @@ series:
       - image: ../assets/feb_2025_img3.jpg
         isThumbnail: false
         width: 5
-  - title: Larchlandia
-    date: 2024-05-12
-    description: |-
-      2025. 
-
-      North Cascades, Washington, USA. 
-
-      Larch madness
-    caption: Commentary about image/process
-    column: 3
-    inPortfolio: false
-    images:
-      - image: ../assets/actualangeloatmeals_drained.jpg
-        isThumbnail: true
-        column: 1
-      - image: ../assets/feb_2025_img1.jpg
-        isThumbnail: false
-        column: 2
   - title: China
     date: 2026-01-01
     description: |-
@@ -78,22 +125,6 @@ series:
         isThumbnail: true
         column: 1
       - image: ../assets/feb_2025_img3.jpg
-        isThumbnail: false
-        column: 2
-  - title: Worldwide Death Rituals
-    date: 2024-09-20
-    description: |-
-      2026-ongoing. 
-
-      Vietnam, Germany, USA.
-    caption: Mixed media on paper and photographic prints
-    column: 2
-    inPortfolio: false
-    images:
-      - image: ../assets/barendorferstill.png
-        isThumbnail: true
-        column: 1
-      - image: ../assets/feb_2025_img2.jpg
         isThumbnail: false
         column: 2
   - title: Barendorf Archive
