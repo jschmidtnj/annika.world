@@ -138,15 +138,12 @@ series:
 
       2024-ongoing.
     caption: ""
-    column: 2
+    column: 4
     inPortfolio: false
     images:
-      - image: ../assets/burntbrick_2020.jpg
-        isThumbnail: true
-        width: 5
-      - image: ../assets/feb_2025_img3.jpg
-        isThumbnail: false
-        width: 5
+      - isThumbnail: true
+        column: 1
+        image: ../assets/img_2281.jpg
   - title: China
     date: 2026-01-01
     description: |-
@@ -161,38 +158,6 @@ series:
         isThumbnail: true
         column: 1
       - image: ../assets/feb_2025_img3.jpg
-        isThumbnail: false
-        column: 2
-  - title: Barendorf Archive
-    date: 2025-02-20
-    description: A series of intimate moments and textures documented in Barendorf.
-    caption: Documentary photography in Germany
-    column: 3
-    inPortfolio: false
-    images:
-      - image: ../assets/feb_2025_img18.jpg
-        isThumbnail: true
-        column: 1
-      - image: ../assets/feb_2025_img25.jpg
-        isThumbnail: false
-        column: 2
-      - image: ../assets/feb_2025_img22.jpg
-        isThumbnail: false
-        column: 1
-      - image: ../assets/feb_2025_img24.jpg
-        isThumbnail: false
-        column: 2
-  - title: future visions
-    date: 2026-01-15
-    description: Speculative landscapes of the future.
-    caption: Digital renders and large format prints
-    column: 2
-    inPortfolio: false
-    images:
-      - image: ../assets/car.jpg
-        isThumbnail: true
-        column: 1
-      - image: ../assets/feb_2025_img4.jpg
         isThumbnail: false
         column: 2
 ---
