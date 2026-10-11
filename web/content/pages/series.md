@@ -160,4 +160,11 @@ series:
       - image: ../assets/feb_2025_img3.jpg
         isThumbnail: false
         column: 2
+  - inPortfolio: false
+    column: 2
+    title: Alantejo
+    images:
+      - isThumbnail: false
+        column: 1
+        image: ../assets/feb_2025_img21.jpg
 ---
