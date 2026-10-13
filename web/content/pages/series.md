@@ -6,7 +6,7 @@ series:
       2026-ongoing
 
       Barendorf, Niedersachsen, Deutschland
-    caption: ""
+    caption: Barendorf, Daylight
     column: 1
     inPortfolio: false
     images:
@@ -58,7 +58,7 @@ series:
       2026-ongoing
 
       Barendorf, Niedersachsen, Deutschland
-    caption: ""
+    caption: Barendorf, Dusk
     column: 2
     inPortfolio: false
     images:
@@ -109,7 +109,7 @@ series:
       Albania, Montenegro
 
       Horses, cows, dogs, and cats free roaming in the Balkans.
-    caption: ""
+    caption: Free Roam
     column: 3
     inPortfolio: false
     images:
@@ -134,10 +134,10 @@ series:
   - title: Valbona Valley
     date: 2023-03-10
     description: |-
-      Valbona Valley, Albania
+      2024-ongoing
 
-      2024-ongoing.
-    caption: ""
+      Valbona Valley, Albania
+    caption: Valbona Valley
     column: 4
     inPortfolio: false
     images:
@@ -195,9 +195,14 @@ series:
         column: 2
   - inPortfolio: false
     column: 2
-    title: Alantejo
+    title: Alentejo
     images:
       - isThumbnail: false
         column: 1
         image: ../assets/feb_2025_img21.jpg
+    description: |-
+      2024
+
+      Alentejo, Portugal
+    caption: Alentejo, Portugal
 ---
