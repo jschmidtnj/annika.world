@@ -141,9 +141,42 @@ series:
     column: 4
     inPortfolio: false
     images:
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_2027.jpg
+      - isThumbnail: false
+        column: 2
+        image: ../assets/img_2069.jpg
       - isThumbnail: true
         column: 1
         image: ../assets/img_2281.jpg
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_2465.jpg
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_1945.jpg
+      - isThumbnail: false
+        column: 2
+        image: ../assets/img_1974.jpg
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_2339.jpg
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_2136.jpg
+      - isThumbnail: false
+        column: 2
+        image: ../assets/img_2227.jpg
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_2569.jpg
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_2247.jpg
+      - isThumbnail: false
+        column: 1
+        image: ../assets/img_2633.jpg
   - title: China
     date: 2026-01-01
     description: |-
