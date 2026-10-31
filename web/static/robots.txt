@@ -1,0 +1,16 @@
+# Block Meta AI Training Crawlers
+User-agent: meta-externalagent
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Meta-ExternalFetcher
+Disallow: /
+
+# Allow link preview crawler
+User-agent: facebookexternalhit
+Allow: /
